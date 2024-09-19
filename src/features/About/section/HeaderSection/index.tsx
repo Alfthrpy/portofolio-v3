@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import Image from "next/image";
-import ulin from "@images/ulin.webp";
+import fathir from "@images/IMG-20240627-WA0018.jpg";
 
 const HeaderSection: FC = () => {
   return (
@@ -25,28 +25,13 @@ const HeaderSection: FC = () => {
         </div>
         <div className="flex flex-col gap-5 pr-0 text-sm md:text-base lg:pr-10 xl:pr-0">
           <p data-aos="zoom-in-right">
-            Hello! My real name is Aldilla Ulinnaja, an Informatics Engineering
-            student interested and experienced in Web Development, specializing
-            in <span className="text-accent">Frontend Development</span> using
-            JavaScript
+          Hello! My name is <span className="text-accent">Muhammad Rizki Al-Fathir</span>, an Informatics Engineering student with a strong interest in Backend Engineering and Machine Learning. I have experience working with Laravel and Next.js at a beginner level. My knowledge extends to AI, Machine Learning, and Deep Learning, and I’m skilled in building models using ML and Neural Networks.
           </p>
           <p data-aos="zoom-in-right" data-aos-delay="100">
-            As an Informatics Engineering student, I have strong knowledge and
-            expertise in Web programming and UI Design. I possess the ability to
-            create user-friendly and visually captivating websites and
-            applications.
+          As an Informatics Engineering student, I have strong knowledge in Backend Engineering, Machine Learning, and experience in web programming with Laravel and Next.js. I’m skilled at creating AI models, including Neural Networks, and I can design user-friendly and visually captivating websites and applications.
           </p>
           <p data-aos="zoom-in-right" data-aos-delay="200">
-            I am constantly striving to improve my skills and knowledge. I
-            believe that ongoing training and personal projects are key to
-            success. I am committed to staying up-to-date with the latest
-            developments in my field and continuously expanding my knowledge and
-            skills.
-          </p>
-          <p data-aos="zoom-in-right" data-aos-delay="300">
-            And oh, there's a little twist &#x2013; I'm also into the world of
-            3D modeling, though I confess I might not be diving into its depths
-            just yet. It's like my side quest that adds a dash of excitement.
+          I'm always striving to enhance my skills and stay updated with the latest technologies through personal projects and continuous learning.
           </p>
         </div>
       </div>
@@ -57,9 +42,9 @@ const HeaderSection: FC = () => {
       >
         <div className="grayscale transition-all duration-500 hover:grayscale-0">
           <Image
-            src={ulin}
-            alt="ulin"
-            height={1000}
+            src={fathir}
+            alt="fathir"
+            height={1800}
             className="scale-50 lg:scale-100 2xl:scale-75"
           />
         </div>

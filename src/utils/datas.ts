@@ -27,6 +27,9 @@ import mongodbIcon from "@icons/mongodb.svg";
 import typescriptIcon from "@icons/typescript.svg";
 import reactQueryIcon from "@icons/react-query.svg";
 import formikIcon from "@icons/formik.png";
+import pythonIcon from "@icons/python.svg";
+import PandasIcon from "@icons/pandas.jpg";
+import JavaIcon from "@icons/java.svg";
 
 // Project Images
 import mulih from "@images/mulih.webp";
@@ -59,41 +62,26 @@ const tools = {
   Git: { name: "Git", src: gitIcon, level: "Version control" },
   Github: { name: "Github", src: githubIcon, level: "Git hosting" },
   NPM: { name: "NPM", src: npmIcon, level: "Package manager" },
-  Yarn: { name: "Yarn", src: yarnIcon, level: "Package manager" },
-  Vite: { name: "Vite", src: vite, level: "Build tool" },
   VSCode: { name: "VSCode", src: vscodeIcon, level: "Code editor" },
-  Figma: { name: "Figma", src: figmaIcon, level: "UIUX Design tool" },
-  Blender: { name: "Blender", src: blenderIcon, level: "3D software" },
-  Spline: { name: "Spline", src: splineIcon, level: "Web 3D design" },
 };
 
 const stacks = {
-  HTML: { name: "HTML", src: htmlIcon, level: "Advanced" },
-  CSS: { name: "CSS", src: cssIcon, level: "Advanced" },
-  SASS: { name: "SASS", src: sassIcon, level: "Advanced" },
+  HTML: { name: "HTML", src: htmlIcon, level: "Intermediate" },
+  CSS: { name: "CSS", src: cssIcon, level: "Intermediate" },
   PHP: { name: "PHP", src: phpIcon, level: "Intermediate" },
-  JS: { name: "Javascript", src: jsIcon, level: "Advanced" },
-  Typescript: { name: "Typescript", src: typescriptIcon, level: "Beginer" },
-  Webpack: { name: "Webpack", src: webpackIcon, level: "Advanced" },
-  React: { name: "ReactJS", src: reactIcon, level: "Advanced" },
-  NextJS: { name: "NextJS", src: nextjsIcon, level: "Advanced" },
-  ReactQuery: {
-    name: "React Query",
-    src: reactQueryIcon,
-    level: "Intermediate",
-  },
-  Formik: { name: "Formik", src: formikIcon, level: "Intermediate" },
-  ThreeJS: {
-    name: "ThreeJS",
-    src: threejsIcon,
-    level: "Use Spline Tools",
-  },
-  Laravel: { name: "Laravel", src: laravelIcon, level: "Beginer" },
+  JS: { name: "Javascript", src: jsIcon, level: "Intermediate" },
+  Typescript: { name: "Typescript", src: typescriptIcon, level: "Beginner" },
+  React: { name: "ReactJS", src: reactIcon, level: "Intermediate" },
+  NextJS: { name: "NextJS", src: nextjsIcon, level: "Intermediate" },
+  Laravel: { name: "Laravel", src: laravelIcon, level: "Intermediate" },
   Express: { name: "ExpressJS", src: expressIcon, level: "Beginner" },
   Bootstrap: { name: "Bootstrap", src: bootstrapIcon, level: "Intermediate" },
   Tailwind: { name: "TailwindCSS", src: tailwindIcon, level: "Advanced" },
   MySQL: { name: "MySQL", src: mysqlIcon, level: "Intermediate" },
   MongoDB: { name: "MongoDB", src: mongodbIcon, level: "Beginer" },
+  Python : { name: "Python", src: pythonIcon, level: "Advanced" },
+  Pandas : { name: "Pandas", src:PandasIcon, level: "Advanced" },
+  Java : { name: "Java", src: JavaIcon, level: "Intermediate"}
 };
 
 const projects = [

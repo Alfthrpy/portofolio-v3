@@ -2,85 +2,42 @@ export const ContentAward = () => {
   const datas = [
     {
       title:
-        "Scholarship for Offline Training Path of Front-End Web Developer Learning",
+        "3rd Place IT Cup IT Fair",
       url: "https://idcamp.ioh.co.id/news/861/coding-scholarship-offline-training-gratis-idcamp-x-kadin",
-      organization: "IDCamp x Kadin",
-      date: "May 2023",
+      organization: "Informatics Engineering UIN Bandung",
+      date: "September 2022",
       description: (
         <>
-          <li>
-            Chosen from among hundreds of participants in the Intermediate
-            Front-End Web Developer class from Solo city (and its surrounding
-            areas) based on the best learning progress and participants'
-            commitment to attendance.
-          </li>
-          <li>Attended a 2-day offline training event in Solo city.</li>
-          <li>
-            Earned the Intermediate Front End Developer Course from Dicoding due
-            to showcasing during the event session.
-          </li>
+          <li> Won the IT Cup programming competition, selected from numerous participants for my exceptional performance in solving programming problems and case studies. </li> <li> Successfully completed a series of challenging questions that emphasized programming logic and efficient coding practices. </li> <li> Recognized for my ability to apply critical thinking and problem-solving skills effectively during the competition. </li>
         </>
       ),
     },
     {
-      title: "Bapekraf Developer Day 2023 Participant",
+      title: "3rd Place Hackathon IT Fair",
       url: "https://bdd.kemenparekraf.go.id/",
-      organization: "Kemenparekraf",
-      date: "May 2023",
+      organization: "Informatics Engineering UIN Bandung",
+      date: "September 2023",
       description: (
         <>
-          <li>
-            In the BDD 2023 event, I successfully qualified as one of the
-            participants who received training course facilitation from the
-            Ministry of Tourism and Creative Economy (Kemenparekraf).
-          </li>
-          <li>
-            The training I obtained is the Front End Developer Expert Course
-            from Dicoding.
-          </li>
+          <li> Won a hackathon focused on web development, where I collaborated with a team to create an innovative solution for a specific problem provided during the event. </li> <li> Designed and implemented a web application that effectively addressed the challenge, showcasing creativity and technical skills. </li> <li> Recognized for my ability to work under pressure and deliver a functional product within a limited timeframe during the competition. </li>
         </>
       ),
     },
     {
-      title: "Awardee of the Bank Indonesia Scholarship 2023",
-      url: "https://kemahasiswaan.ums.ac.id/tawaran-beasiswa-bi-tahun-2023/",
-      organization: "Bank Indonesia",
-      date: "Apr 2023",
-      description: (
-        <li>
-          Received study allowance from Bank Indonesia and became a member of
-          the Generasi Baru Indonesia (GENBI) community.
-        </li>
-      ),
-    },
-    {
-      title: "1st Runner Up UI/UX Competition",
-      url: "https://www.instagram.com/cif_fkiums/",
-      organization: "BEM FKI UMS",
-      date: "July 2022",
+      title: "Gold Medal IICYMS Category Computer Science",
+      url: "https://www.iysa.or.id/",
+      organization: "IYSA",
+      date: "August 2024",
       description: (
         <>
-          <li>
-            As part of the Communication and Informatic Festival organized by
-            BEM FKI, I took part in the UI/UX Competition Project with the theme
-            "Menilik Jendela Cakrawala".
-          </li>
-          <li>
-            In a team of three, we developed a project named{" "}
-            <a
-              href="https://www.figma.com/proto/RID0jaEou3qDxGEepjxSAw/Rawuh?page-id=51%3A2&node-id=51%3A3&starting-point-node-id=51%3A3&scaling=scale-down-width"
-              target="_blank"
-              rel="noreferrer"
-              className="text-underline"
-            >
-              Rawuh
-            </a>
-            —a travel website dedicated to showcasing lesser-known tourist
-            destinations across Indonesia.
-          </li>
+        <li> Won the IICYMS competition Gold Medal in the Computer Science category, where my team developed a semantic search engine application for the Quran. </li>
+        <li> Collaboratively designed and implemented an innovative solution that enhances users' ability to search and access Quranic content effectively. </li>
+        <li> Recognized for our creativity and technical expertise in addressing complex challenges within the project, leading to our success in the competition. </li>
+        <li>Link Application : <a className="text-accent" href="https://beta-sequran.vercel.app/">Sequran</a></li>
         </>
       ),
     },
+    
   ];
 
   return (

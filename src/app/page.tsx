@@ -2,9 +2,9 @@ import type { FC } from "react";
 import Home from "@/features/Home";
 
 export const metadata = {
-  title: "Ulinnaja Aldi",
+  title: "Al-Fathir",
   description:
-    "Ulinnaja Aldi is a Front-End software engineer specializes in building (and sometimes designing) amazing and new digital experiences.",
+    "Al-Fathir is a Backend software engineer specializes in building amazing and new digital experiences.",
 };
 
 const Homepage: FC = () => {

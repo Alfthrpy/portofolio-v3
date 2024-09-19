@@ -1,59 +1,27 @@
 export const ContentOrganization = () => {
   const datas = [
     {
-      title: "Staff of Media and Publications",
-      url: "https://www.instagram.com/genbi_solo/?hl=id",
-      organization: "GENBI SOLO",
-      date: "Apr 2023 - Present",
+      title: "Pers Division",
+      url: "https://www.instagram.com/himaja_uinsgd/d",
+      organization: "HIMAJA Ma'had Al-Jami'ah UIN BANDUNG",
+      date: "September 2022 - July 2023",
       description: (
         <>
           <li>
-            Being selected as one of the recipients of the Bank Indonesia
-            Scholarship in 2023 is a source of pride for myself. Additionally,
-            Bank Indonesia runs a program called the "Generasi Baru Indonesia"
-            (Genbi), which aims to cultivate a young generation with leadership
-            qualities, creativity, innovation, and integrity.
+          As a member of the Press Division in our organization, I am responsible for communicating our activities and achievements to the public. I focus on creating engaging content that informs and inspires our audience. My role allows me to enhance my writing skills, collaborate with a dynamic team, and contribute to building our organization’s brand and visibility.
           </li>
         </>
       ),
     },
     {
-      title: "Staff of Interest and Talent",
-      url: "https://www.instagram.com/himatifums/",
-      organization: "HIMATIF UMS",
-      date: "Dec 2020 - Dec 2022",
+      title: "Member of Salman Digital Lab",
+      url: "https://www.instagram.com/kaderisasisalman/",
+      organization: "BMKA",
+      date: "July 2023 - January 2024",
       description: (
         <>
           <li>
-            In the Student Association of Informatics Engineering at UMS
-            (HIMATIF), I hold a position as the coordinator of the Interest and
-            Talent Division, which oversees various work programs such as
-            Himatif's social media management, Himatif Portable Club (HPC),
-            Profile Video creation, Parade of Informatics Engineering (PARTI),
-            and UNCORE Digital Magazine.
-          </li>
-          <li>
-            One of the biggest events is the{" "}
-            <a
-              href="https://www.instagram.com/parti.ums/"
-              className="text-underline"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Parade of Informatics Engineering
-            </a>
-            (PARTI), where I served as the Head of Publication and
-            Documentation, responsible for organizing all the event's visual
-            documentation and preparations, including photos, videos,{" "}
-            <a
-              href="https://www.instagram.com/p/CiZACw0JXmC/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-underline"
-            >
-              3D mascot
-            </a>
-            , and media streaming.
+          As a member of Salman Digital Lab, I have the opportunity to deepen my knowledge of web development. Here, I engage in hands-on projects and collaborate with fellow members, enhancing my skills in programming and UI design. The lab provides a supportive environment for learning and innovation, allowing me to explore the latest technologies and trends in the digital space.
           </li>
         </>
       ),

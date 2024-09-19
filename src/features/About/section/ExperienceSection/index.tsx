@@ -16,9 +16,7 @@ const ExperienceSection: FC = () => {
     selectedContent = <ContentEducation />;
   } else if (activeCategory === "organizations") {
     selectedContent = <ContentOrganization />;
-  } else if (activeCategory === "experience") {
-    selectedContent = <ContentWorkExperience />;
-  } else if (activeCategory === "awards") {
+  }  else if (activeCategory === "awards") {
     selectedContent = <ContentAward />;
   } else if (activeCategory === "certification") {
     selectedContent = <ContentCertification />;
@@ -27,7 +25,6 @@ const ExperienceSection: FC = () => {
   const categories = [
     { name: "Education", value: "education" },
     { name: "Organizations", value: "organizations" },
-    { name: "Work Experience", value: "experience" },
     { name: "Awards", value: "awards" },
     { name: "Certification", value: "certification" },
   ];

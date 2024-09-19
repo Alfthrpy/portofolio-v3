@@ -23,17 +23,16 @@ const MainContent: FC = () => {
           data-aos="zoom-in-up"
           data-aos-duration="300"
         >
-          Delivering modern,
+          Building intelligent, 
           <br />
-          cohensive & instuitive web solution.
+          reliable & scalable AI solutions
         </h2>
         <p
           className="text-sm text-primary md:text-base"
           data-aos="fade-up"
           data-aos-duration="300"
         >
-          I enjoy designing meaningful experiences for brands & businesses to
-          help them serve their target users.
+          I enjoy creating advanced machine learning models and backend systems to help businesses leverage data and technology effectively.
         </p>
       </div>
       <div className="bg-base-100 absolute z-0 m-auto h-[600px] w-[350px] opacity-25 md:w-[672px] lg:w-[825px] xl:w-[1080px]">

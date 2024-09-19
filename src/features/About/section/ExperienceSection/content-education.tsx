@@ -7,12 +7,12 @@ export const ContentEducation = () => {
           {" "}
           @
           <a
-            href="https://informatika.ums.ac.id"
+            href="https://if.uinsgd.ac.id/"
             target="_blank"
             rel="noreferrer"
             className="text-underline"
           >
-            Muhammadiyah Surakarta University
+            Sunan Gunung Jati State Islamic University, Bandung
           </a>
         </span>
       </h3>
@@ -24,23 +24,10 @@ export const ContentEducation = () => {
           I decided to pursue this field of study.
         </li>
         <li>
-          During the first four semesters, I was more interested in graphic
-          design and 3D modeling, and I even created a{" "}
-          <a
-            href="https://www.youtube.com/c/UlinnajaTbx"
-            className="text-underline"
-            target="_blank"
-            rel="noreferrer"
-          >
-            YouTube channel
-          </a>{" "}
-          with content on Unity game modding, which now has over 20k++
-          subscribers.
+        From the beginning of the semester, I was interested in AI and machine learning. In the second semester, I had already created a classification model.
         </li>
         <li>
-          Starting from the fifth semester, I realized that coding was my main
-          goal in pursuing this major. Therefore, I began to learn about
-          programming and fell in love with coding ✨
+        In my 4th semester, my team and I participated in the <a className="text-accent" href="https://www.iicyms.or.id/">IICYMS competition</a> where we won a gold medal in the computer science category. This achievement deepened my interest and sparked a growing passion for machine learning.
         </li>
       </ul>
     </div>

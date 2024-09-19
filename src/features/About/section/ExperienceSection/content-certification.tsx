@@ -10,97 +10,74 @@ export const ContentCertification = () => {
       link: "https://www.dicoding.com",
       certificate: [
         {
-          name: "Front-End Web Developer Expert",
-          link: "https://www.dicoding.com/certificates/RVZKOMWKQPD5",
+          name: "Java Beginner",
+          link: "https://www.dicoding.com/certificates/JMZV32KQRPN9",
         },
         {
-          name: "Intermediate Front-End Web Tools",
-          link: "https://www.dicoding.com/certificates/NVP7ONEYRPR0",
+          name: "Beginner Machine Learning Engineer",
+          link: "https://www.dicoding.com/certificates/2VX3OJE7VZYQ",
         },
         {
-          name: "Fundamental Web Applications with React",
-          link: "https://www.dicoding.com/certificates/0LZ0GGLJ0X65",
+          name: "Learn the Basics of Data Visualization",
+          link: "https://www.dicoding.com/certificates/JLX1W7QWGP72",
         },
         {
-          name: "Fundamental Front-End Web Development",
-          link: "https://www.dicoding.com/certificates/MEPJVR344P3V",
-        },
-        {
-          name: "Create Front-End Web for Beginners",
-          link: "https://www.dicoding.com/certificates/2VX3Y55DNPYQ",
-        },
-        {
-          name: "Build Back-End Applications for Beginners",
-          link: "https://www.dicoding.com/certificates/72ZD93V26PYW",
-        },
-        {
-          name: "Basics of Web Programming",
-          link: "https://www.dicoding.com/certificates/QLZ9KGKJ9Z5D",
-        },
-        {
-          name: "Basics of JavaScript Programming",
-          link: "https://www.dicoding.com/certificates/2VX31QV23ZYQ",
-        },
-        {
-          name: "Computer Networking for Beginners",
-          link: "https://www.dicoding.com/certificates/EYX49QGVRPDL",
-        },
-        {
-          name: "Basics of DevOps",
-          link: "https://www.dicoding.com/certificates/QLZ926312X5D",
-        },
-        {
-          name: "Cloud Practitioner Essentials (Learning AWS Cloud Basics)",
-          link: "https://www.dicoding.com/certificates/ERZR0817QXYV",
+          name: "Python Beginner",
+          link: "https://www.dicoding.com/certificates/GRX52D802X0M",
         },
       ],
     },
     {
       type: "Course",
-      name: "Progate",
-      link: "https://progate.com/",
+      name: "Kaggle",
+      link: "https://www.kaggle.com/",
       certificate: [
         {
-          name: "React",
-          link: "https://drive.google.com/file/d/1b80zFNL9-Cc5jSKa2Hpkc_6l_NwsvOoP/view?usp=sharing",
+          name: "Python",
+          link: "https://www.kaggle.com/learn/certification/alfthrpy/python",
         },
         {
-          name: "NodeJS",
-          link: "https://drive.google.com/file/d/1GydrUfjuYXyKf4PPa9xOfDS9Ag4RN03C/view?usp=sharing",
+          name: "Introduction to Machine Learning",
+          link: "https://www.kaggle.com/learn/certification/alfthrpy/intro-to-machine-learning",
         },
         {
-          name: "Javascript",
-          link: "https://drive.google.com/file/d/1eVteeFTAeOZdjySVwk32LbsbipnBvCrd/view?usp=sharing",
+          name: "Pandas Python",
+          link: "https://www.kaggle.com/learn/certification/alfthrpy/pandas",
         },
         {
-          name: "HTML & CSS",
-          link: "https://drive.google.com/file/d/1fZB2CwZ1c7UL_clMIuSp3W98NAavhBnJ/view?usp=sharing",
+          name: "Intermediate Machine Learning",
+          link: "https://www.kaggle.com/learn/certification/alfthrpy/intermediate-machine-learning",
         },
-      ],
-    },
-    {
-      type: "Competence",
-      name: "BNSP",
-      link: "https://www.bnsp.go.id",
-      certificate: [
         {
-          name: "Junior Web Developer",
-          link: "https://www.linkedin.com/feed/update/urn:li:activity:7005734510378041344/",
+          name: "Data Visualization",
+          link: "https://www.kaggle.com/learn/certification/alfthrpy/data-visualization",
+        },
+        {
+          name: "Feature Engineering",
+          link: "https://www.kaggle.com/learn/certification/alfthrpy/feature-engineering",
+        },
+        {
+          name: "Introduction to Deep Learning",
+          link: "https://www.kaggle.com/learn/certification/alfthrpy/intro-to-deep-learning",
         },
       ],
     },
     {
       type: "Course",
-      name: "Sololearn",
-      link: "https://www.sololearn.com",
+      name: "FreeCodeCamp",
+      link: "https://www.freecodecamp.org",
       certificate: [
         {
-          name: "HTML ",
-          link: "https://www.sololearn.com/certificates/CT-DJAJTAPO",
+          name: "Responsive Web Design",
+          link: "https://www.freecodecamp.org/certification/fccd895ee9e-97f3-4be1-8665-c3385f3fb338/responsive-web-design",
         },
         {
-          name: "Javascript ",
-          link: "https://www.sololearn.com/certificates/CT-VQKUFX6T",
+          name: "Javascript Algorithms and Data Structures",
+          link: "https://www.freecodecamp.org/certification/fccd895ee9e-97f3-4be1-8665-c3385f3fb338/javascript-algorithms-and-data-structures-v8",
+        },
+        {
+          name: "Backend Development and APIs",
+          link: "https://www.freecodecamp.org/certification/fccd895ee9e-97f3-4be1-8665-c3385f3fb338/back-end-development-and-apis",
         },
       ],
     },
