@@ -33,6 +33,8 @@ import mikkuGif from "@gif/mikku.gif";
 import ttsGif from "@gif/tts.gif";
 import ebuddyGif from "@gif/ebuddy.gif";
 import searchmanticGif from "@gif/searchmantic.gif";
+import irisGif from "@gif/irs.gif";
+import sendthepictGif from "@gif/sendthepict.gif";
 
 const tools = {
   Git: { name: "Git", src: gitIcon, level: "Version control" },
@@ -69,7 +71,7 @@ const projects = [
     web: "https://bertumbuh.vercel.app/",
     repo: "",
     stack: "Python, Tkinter, Scikit-learn",
-    gif: "",
+    gif: irisGif,
   },
   {
     id: 10,
@@ -89,7 +91,7 @@ const projects = [
     web: "https://sendthepict.vercel.app/",
     repo: "https://github.com/alfthrpy/sendthepict",
     stack: "Webpack, Axios, TailwindCSS, DaisyUI",
-    gif: mikkuGif,
+    gif: sendthepictGif,
   },
   {
     id: 12,

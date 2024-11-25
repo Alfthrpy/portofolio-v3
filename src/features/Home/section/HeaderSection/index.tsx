@@ -4,10 +4,9 @@ import Image from 'next/image';
 const HeaderSection: FC = () => {
   return (
     <section className="flex h-[80vh] w-full flex-col justify-center px-0 pt-44 leading-relaxed md:h-screen md:pt-16 lg:px-[70px] lg:pt-12 ">
-     <div className="flex flex-col md:flex-row items-center">
-      <div className="md:w-1/2">
+      <div className="md:w-full">
         <p
-          className="ml-1 hidden pb-3 text-sm text-accent md:block md:pb-7 md:text-base"
+          className="ml-1 pb-3 text-sm text-accent md:block md:pb-7 md:text-base"
           data-aos="fade-up"
         >
           Hi, my name is
@@ -33,17 +32,6 @@ const HeaderSection: FC = () => {
           Machine Learning, and Deep Learning, and I'm experienced in building
           models using ML and Neural Networks.
         </p>
-      </div>
-
-      <div className="mt-6 md:mt-0 md:w-1/2 flex justify-center">
-        <Image
-          src="/images/IMG-20240609-WA0015.jpg" // ganti dengan path gambar Anda
-          alt="Muhammad Rizki Al-Fathir"
-          width={300} // ukuran lebar gambar
-          height={300} // ukuran tinggi gambar
-          className="rounded-full"
-        />
-      </div>
     </div>
 
       <div
