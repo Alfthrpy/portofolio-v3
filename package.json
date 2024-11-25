@@ -14,6 +14,7 @@
     "aos": "^2.3.4",
     "eslint": "8.32.0",
     "eslint-config-next": "^13.4.2",
+    "new-universe": "file:",
     "next": "^14.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
