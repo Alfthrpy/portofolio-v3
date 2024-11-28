@@ -27,6 +27,8 @@ import sendthepict from "@images/sendthepict.png";
 import tts from "@images/tts.png";
 import mikku from "@images/Mikku.png";
 import searchmantic from "@images/searchmantic.png";
+import shortener from "@images/shortener.png";
+
 
 // Gif Images
 import mikkuGif from "@gif/mikku.gif";
@@ -35,6 +37,7 @@ import ebuddyGif from "@gif/ebuddy.gif";
 import searchmanticGif from "@gif/searchmantic.gif";
 import irisGif from "@gif/irs.gif";
 import sendthepictGif from "@gif/sendthepict.gif";
+import shortenerGif from "@gif/api-shortener.gif";
 
 const tools = {
   Git: { name: "Git", src: gitIcon, level: "Version control" },
@@ -64,12 +67,22 @@ const stacks = {
 
 const projects = [
   {
+    id: 10,
+    name: "Shortener URL API",
+    desc: "URL Shortener App is a platform for shortening long URLs into shareable, compact links. It supports user management, link creation, and detailed click tracking with analytics.",
+    image: shortener,
+    web: "",
+    repo: "https://github.com/Alfthrpy/shortener-api",
+    stack: "Mongodb, ExpressJs, Swagger OpenAPI",
+    gif: shortenerGif,
+  },
+  {
     id: 9,
     name: "Iris Classifier",
     desc: "The Iris Classifier app predicts the species of iris flowers (Setosa, Versicolor, Virginica) based on petal and sepal measurements, offering quick and accurate results.",
     image: iris,
-    web: "https://bertumbuh.vercel.app/",
-    repo: "",
+    web: "",
+    repo: "https://github.com/Alfthrpy/iris-classifier-apps",
     stack: "Python, Tkinter, Scikit-learn",
     gif: irisGif,
   },
