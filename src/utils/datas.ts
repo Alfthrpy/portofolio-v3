@@ -28,6 +28,7 @@ import tts from "@images/tts.png";
 import mikku from "@images/Mikku.png";
 import searchmantic from "@images/searchmantic.png";
 import shortener from "@images/shortener.png";
+import chatsql from "@images/chatsql.jpeg";
 
 
 // Gif Images
@@ -38,6 +39,7 @@ import searchmanticGif from "@gif/searchmantic.gif";
 import irisGif from "@gif/irs.gif";
 import sendthepictGif from "@gif/sendthepict.gif";
 import shortenerGif from "@gif/api-shortener.gif";
+import chatsqlgif from "@gif/chatsql.gif";
 
 const tools = {
   Git: { name: "Git", src: gitIcon, level: "Version control" },
@@ -66,6 +68,16 @@ const stacks = {
 };
 
 const projects = [
+  {
+    id: 10,
+    name: "Chatsql",
+    desc: "ChatSQL is a chatbot application that can interact directly with your database.",
+    image: chatsql,
+    web: "https://huggingface.co/spaces/PetaniHandal/Chatsql",
+    repo: "https://github.com/Alfthrpy/chatsql",
+    stack: "Python, Smolagents, Gradio",
+    gif: chatsqlgif,
+  },
   {
     id: 10,
     name: "Shortener URL API",
