@@ -29,7 +29,8 @@ import mikku from "@images/Mikku.png";
 import searchmantic from "@images/searchmantic.png";
 import shortener from "@images/shortener.png";
 import chatsql from "@images/chatsql.jpeg";
-
+import ukm from "@images/ukm.png"
+import tenangin from "@images/tenangin.png"
 
 // Gif Images
 import mikkuGif from "@gif/mikku.gif";
@@ -40,6 +41,7 @@ import irisGif from "@gif/irs.gif";
 import sendthepictGif from "@gif/sendthepict.gif";
 import shortenerGif from "@gif/api-shortener.gif";
 import chatsqlgif from "@gif/chatsql.gif";
+import ukmgif from "@gif/ukm.gif"
 
 const tools = {
   Git: { name: "Git", src: gitIcon, level: "Version control" },
@@ -68,6 +70,26 @@ const stacks = {
 };
 
 const projects = [
+  {
+    id: 12,
+    name: "Tenangin",
+    desc: "Tenangin is a mental health management platform with counselor chatbot features, mood tracking, and psychological service recommendations",
+    image: tenangin,
+    web: "https://frontend-tenangin.vercel.app/",
+    repo: "https://github.com/Tenangin",
+    stack: "React.js, Express.js, Tensorflow, Langchain, RAG Framework, FastAPI",
+    gif: null,
+  },
+  {
+    id: 11,
+    name: "Landing Page UKM LIKM",
+    desc: "This is a landing page from an organization at university that includes management of news data and gallery",
+    image: ukm,
+    web: "https://ukm-likm.netlify.app/",
+    repo: "https://github.com/Alfthrpy",
+    stack: "React.js, Supabase, Tanstack Query",
+    gif: ukmgif,
+  },
   {
     id: 10,
     name: "Chatsql",
