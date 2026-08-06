@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#151E31" />
+  <rect x="1" y="1" width="798" height="448" fill="none" stroke="#83DBFF" stroke-opacity="0.15" stroke-width="2" />
+  <g transform="translate(400,185)" fill="none" stroke="#83DBFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M -60 -10 L 0 -35 L 60 -10 L 0 15 Z" />
+    <path d="M -35 0 L -35 30 C -35 42 -18 52 0 52 C 18 52 35 42 35 30 L 35 0" />
+    <line x1="60" y1="-10" x2="60" y2="25" />
+  </g>
+  <text x="400" y="300" font-family="monospace" font-size="28" fill="#E5E7EB" text-anchor="middle">STUD</text>
+  <text x="400" y="332" font-family="monospace" font-size="15" fill="#9CA3AF" text-anchor="middle">preview image coming soon</text>
+</svg>

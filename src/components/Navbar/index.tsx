@@ -73,13 +73,22 @@ export default function Navbar() {
               !isOpen ? "Open Navigation Menu" : "Close Navigation Menu"
             }
             onClick={() => setIsOpen(!isOpen)}
-            className="relative z-30"
+            className="relative z-30 h-10 w-10"
           >
-            {!isOpen ? (
-              <BiMenuAltRight className="h-10 w-10 fill-current text-accent" />
-            ) : (
-              <BiX className="h-10 w-10 fill-current text-accent" />
-            )}
+            <BiMenuAltRight
+              className={`absolute inset-0 h-10 w-10 fill-current text-accent transition-[opacity,transform,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)] ${
+                isOpen
+                  ? "scale-[0.25] opacity-0 blur-sm"
+                  : "scale-100 opacity-100 blur-none"
+              }`}
+            />
+            <BiX
+              className={`absolute inset-0 h-10 w-10 fill-current text-accent transition-[opacity,transform,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)] ${
+                isOpen
+                  ? "scale-100 opacity-100 blur-none"
+                  : "scale-[0.25] opacity-0 blur-sm"
+              }`}
+            />
           </button>
         </div>
 
@@ -88,7 +97,7 @@ export default function Navbar() {
           {NAVBAR_ITEMS.map((item, index) => (
             <Link
               href={item.href}
-              className="flex flex-col items-end font-mono text-sm  text-primary transition-all duration-300 hover:text-accent xl:text-base"
+              className="flex flex-col items-end font-mono text-sm  text-primary transition-colors duration-300 hover:text-accent xl:text-base"
               key={index}
               data-aos="fade-down"
               data-aos-delay={`${index}00`}

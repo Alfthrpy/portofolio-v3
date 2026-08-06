@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#151E31" />
+  <rect x="1" y="1" width="798" height="448" fill="none" stroke="#83DBFF" stroke-opacity="0.15" stroke-width="2" />
+  <g transform="translate(400,190)" fill="none" stroke="#83DBFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="-16" cy="-8" r="7" />
+    <circle cx="16" cy="-8" r="7" />
+    <circle cx="-30" cy="14" r="7" />
+    <circle cx="30" cy="14" r="7" />
+    <path d="M -34 46 C -34 26 -18 14 0 14 C 18 14 34 26 34 46 C 34 60 18 66 0 66 C -18 66 -34 60 -34 46 Z" />
+  </g>
+  <text x="400" y="300" font-family="monospace" font-size="28" fill="#E5E7EB" text-anchor="middle">Purrstation</text>
+  <text x="400" y="332" font-family="monospace" font-size="15" fill="#9CA3AF" text-anchor="middle">preview image coming soon</text>
+</svg>

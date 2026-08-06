@@ -16,7 +16,7 @@ export const ContentEducation = () => {
           </a>
         </span>
       </h3>
-      <p className="pb-5 font-mono text-sm lg:text-base">Aug 2020 - Present</p>
+      <p className="pb-5 font-mono text-sm lg:text-base">Aug 2020 - Jul 2026</p>
       <ul className="flex list-inside list-disc flex-col gap-4 text-sm leading-relaxed lg:text-base">
         <li>
           I enrolled in the Informatics Engineering program with the motivation
@@ -28,6 +28,9 @@ export const ContentEducation = () => {
         </li>
         <li>
         In my 4th semester, my team and I participated in the <a className="text-accent" href="https://www.iicyms.or.id/">IICYMS competition</a> where we won a gold medal in the computer science category. This achievement deepened my interest and sparked a growing passion for machine learning.
+        </li>
+        <li>
+        For my undergraduate thesis, I built <a className="text-accent" href="https://github.com/Alfthrpy/STUD">STUD</a>, a multi-agent AI pipeline that decomposes courses into atomic concepts and generates pedagogically sound slide decks, and graduated in July 2026.
         </li>
       </ul>
     </div>

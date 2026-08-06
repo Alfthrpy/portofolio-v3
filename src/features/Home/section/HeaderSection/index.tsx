@@ -27,10 +27,11 @@ const HeaderSection: FC = () => {
           className="w-full text-sm leading-relaxed text-primary md:w-[540px] md:text-base"
           data-aos="zoom-in-up"
         >
-          I'm a Backend Engineer and Machine Learning Engineer with experience in
-          Laravel and Next.js at a beginner level. I have strong knowledge of AI,
-          Machine Learning, and Deep Learning, and I'm experienced in building
-          models using ML and Neural Networks.
+          I'm a Backend Engineer and Machine Learning Engineer with hands-on
+          experience building high-throughput data platforms, agentic AI
+          pipelines, and full-stack web apps with Laravel and Next.js. I have
+          strong knowledge of AI, Machine Learning, and Deep Learning, and I'm
+          experienced in building models using ML and Neural Networks.
         </p>
     </div>
 
@@ -40,7 +41,7 @@ const HeaderSection: FC = () => {
         data-aos-duration="600"
       >
         <a
-          className="rounded-[4px] border-2 border-accent px-7 py-5 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
+          className="inline-block rounded-[4px] border-2 border-accent px-7 py-5 text-accent transition-[background-color,transform] duration-300 hover:bg-accent hover:bg-opacity-10 active:scale-[0.96]"
           href="https://drive.google.com/file/d/1UmpwUriO3WTtgplwykaFzg9vnyitPejL/view?usp=sharing"
           target="_blank"
           rel="noreferrer"

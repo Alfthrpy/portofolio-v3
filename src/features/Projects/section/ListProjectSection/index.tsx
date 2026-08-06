@@ -36,7 +36,7 @@ const ListProject: FC = () => {
         {sortedData.slice(0, numToShow).map((data, index) => (
           <div
             key={data.id}
-            className="translate-y-0 cursor-pointer transition-all duration-300 hover:-translate-y-2"
+            className="translate-y-0 cursor-pointer transition-transform duration-300 hover:-translate-y-2"
           >
             <CardProject
               loading={loading[index]}
@@ -60,7 +60,7 @@ const ListProject: FC = () => {
       </div>
       <button
         onClick={shouldShowMore() ? handleShowMore : handleShowLess}
-        className="rounded-[4px] border-2 border-accent px-7 py-4 font-mono text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
+        className="rounded-[4px] border-2 border-accent px-7 py-4 font-mono text-accent transition-[background-color,transform] duration-300 hover:bg-accent hover:bg-opacity-10 active:scale-[0.96]"
       >
         {shouldShowMore() ? "Show More" : "Show Less"}
       </button>

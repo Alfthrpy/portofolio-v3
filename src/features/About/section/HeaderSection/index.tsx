@@ -25,10 +25,10 @@ const HeaderSection: FC = () => {
         </div>
         <div className="flex flex-col gap-5 pr-0 text-sm md:text-base lg:pr-10 xl:pr-0">
           <p data-aos="zoom-in-right">
-          Hello! My name is <span className="text-accent">Muhammad Rizki Al-Fathir</span>, an Informatics Engineering student with a strong interest in Backend Engineering and Machine Learning. I have experience working with Laravel and Next.js at a beginner level. My knowledge extends to AI, Machine Learning, and Deep Learning, and I’m skilled in building models using ML and Neural Networks.
+          Hello! My name is <span className="text-accent">Muhammad Rizki Al-Fathir</span>, an Informatics Engineering graduate with a strong interest in Backend Engineering and Machine Learning. I recently interned as a Backend Engineer at Tritronik Indonesia, where I worked on a mediation platform handling buffering, windowing, and a RocksDB-backed persistence layer. My knowledge extends to AI, Machine Learning, and Deep Learning, and I’m skilled in building models using ML and Neural Networks.
           </p>
           <p data-aos="zoom-in-right" data-aos-delay="100">
-          As an Informatics Engineering student, I have strong knowledge in Backend Engineering, Machine Learning, and experience in web programming with Laravel and Next.js. I’m skilled at creating AI models, including Neural Networks, and I can design user-friendly and visually captivating websites and applications.
+          I have strong knowledge in Backend Engineering, Machine Learning, and experience in web programming with Laravel and Next.js. I’m skilled at creating AI models and agentic AI pipelines, including Neural Networks, and I can design user-friendly and visually captivating websites and applications.
           </p>
           <p data-aos="zoom-in-right" data-aos-delay="200">
           I'm always striving to enhance my skills and stay updated with the latest technologies through personal projects and continuous learning.

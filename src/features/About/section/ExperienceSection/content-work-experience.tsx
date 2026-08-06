@@ -11,6 +11,25 @@ import Image from "next/image";
 export const ContentWorkExperience = () => {
   const datas = [
     {
+      title: "Backend Engineer Intern",
+      url: "https://www.tritronik.com/",
+      company: "Tritronik Indonesia",
+      date: "Feb 2026 - Jul 2026",
+      description: (
+        <p>
+          I worked on a mediation platform, implementing buffering and
+          windowing logic for high-throughput streaming data and building a
+          persistent storage layer backed by RocksDB.
+        </p>
+      ),
+      techs: [
+        {
+          name: "RocksDB",
+          icon: null,
+        },
+      ],
+    },
+    {
       title: "Generasi GIGIH 3.0 - Fullstack Engineer Apprenticeship",
       url: "https://www.anakbangsabisa.org/generasi-gigih/program",
       company: "GoTo Impact Foundation",
@@ -168,15 +187,21 @@ export const ContentWorkExperience = () => {
               {data.techs.map((tech, index) => (
                 <div
                   key={index}
-                  className="rounded-md bg-accent/10 p-1"
+                  className="flex items-center rounded-md bg-accent/10 p-1"
                   title={tech.name}
                 >
-                  <Image
-                    src={tech.icon}
-                    alt={tech.icon}
-                    width={28}
-                    height={28}
-                  />
+                  {tech.icon ? (
+                    <Image
+                      src={tech.icon}
+                      alt={tech.icon}
+                      width={28}
+                      height={28}
+                    />
+                  ) : (
+                    <span className="px-2 py-1 font-mono text-xs text-accent">
+                      {tech.name}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>

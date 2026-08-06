@@ -21,6 +21,8 @@ import PandasIcon from "@icons/pandas.jpg";
 import JavaIcon from "@icons/java.svg";
 
 // Project Images
+import purrstation from "@images/placeholder-purrstation.svg";
+import stud from "@images/placeholder-stud.svg";
 import iris from "@images/iris.png";
 import Ebuddy from "@images/ebuddy.png";
 import sendthepict from "@images/sendthepict.png";
@@ -70,6 +72,26 @@ const stacks = {
 };
 
 const projects = [
+  {
+    id: 16,
+    name: "STUD",
+    desc: "STUD (my undergraduate thesis) is a multi-agent AI pipeline that decomposes courses into atomic concepts using First Principles thinking and Pareto focus, then generates pedagogically sound, RAG-grounded slide decks.",
+    image: stud,
+    web: "",
+    repo: "https://github.com/Alfthrpy/STUD",
+    stack: "Python, CrewAI, ChromaDB, Streamlit, Docling, Sentence Transformers",
+    gif: null,
+  },
+  {
+    id: 15,
+    name: "Purrstation",
+    desc: "Purrstation is a real-time monitoring dashboard for IoT-based smart cat feeders, covering device monitoring, user insights, notifications, and admin management for a subscription-based service.",
+    image: purrstation,
+    web: "",
+    repo: "https://github.com/purrstations/purrstation-dashboard",
+    stack: "TanStack Start, React, TypeScript, Socket.IO, Radix UI, Node.js",
+    gif: null,
+  },
   {
     id: 12,
     name: "Tenangin",

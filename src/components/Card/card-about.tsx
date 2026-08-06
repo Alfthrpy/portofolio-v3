@@ -27,7 +27,7 @@ const CardAbout: FC<CardAboutProps> = (props) => {
         <Image
           src={images}
           alt={title}
-          className={`drop-shadow-xl transition-all duration-300 ${
+          className={`drop-shadow-xl transition-[width,height] duration-300 ${
             hover
               ? "h-[75%] w-[75%] md:h-[85%] md:w-[85%] lg:h-full lg:w-full"
               : "h-[65%] w-[65%] lg:h-[85%] lg:w-[85%] "
@@ -36,7 +36,7 @@ const CardAbout: FC<CardAboutProps> = (props) => {
       </div>
       <div className="flex items-center text-sm md:text-base lg:text-lg">
         <div
-          className={`font-medium text-secondary transition-all duration-300 ${
+          className={`font-medium text-secondary transition-transform duration-300 ${
             hover ? "-translate-y-2 md:-translate-y-3 " : "translate-y-0 "
           }`}
         >
@@ -47,7 +47,7 @@ const CardAbout: FC<CardAboutProps> = (props) => {
             hover
               ? "translate-x-0 opacity-100"
               : "translate-x-3 opacity-0 md:translate-x-5 lg:translate-x-10"
-          } absolute mt-6 font-mono text-[10px] text-accent transition-all duration-300 md:text-xs lg:text-sm`}
+          } absolute mt-6 font-mono text-[10px] text-accent transition-[opacity,transform] duration-300 md:text-xs lg:text-sm`}
         >
           {informationLevel}
         </div>
