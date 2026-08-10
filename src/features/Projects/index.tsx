@@ -1,32 +1,29 @@
 import type { FC } from "react";
-import { ProjectGetInTouchSection, ProjectListProjectSection } from "./section";
-
-export const metadata = {
-  title: "Projects | Ulinnaja Aldi",
-  description: "Projects page of Aldilla Ulinnaja portfolio website",
-};
+import {
+  ProjectGetInTouchSection,
+  ProjectListProjectSection,
+} from "./section";
+import { Reveal } from "@/components";
 
 const Project: FC = () => {
   return (
-    <div className="mt-40 flex flex-col items-center justify-center">
-      <h1
-        className="pb-2 text-center text-2xl font-semibold leading-relaxed text-secondary md:text-3xl"
-        data-aos="zoom-in-up"
-        data-aos-duration="300"
-      >
-        Past Project Experience
-      </h1>
-      <p
-        className="text-center text-sm font-medium text-primary md:text-base"
-        data-aos="fade-up"
-        data-aos-duration="300"
-      >
-        Explore how I consistently delivered maximum results in my previous
-        projects.
-      </p>
-      <div data-aos="zoom-in" data-aos-duration="600" data-aos-once="true">
-        <ProjectListProjectSection />
-      </div>
+    <div className="mt-40 flex flex-col items-center">
+      <Reveal className="flex w-full max-w-3xl items-center gap-4 self-start">
+        <h1 className="text-xl font-semibold text-secondary md:text-2xl">
+          <span className="font-mono text-lg font-normal text-accent lg:text-xl">
+            03.{" "}
+          </span>
+          Past Project Experience
+        </h1>
+        <div className="h-[1px] w-32 bg-border_col md:w-96"></div>
+      </Reveal>
+      <Reveal delay={0.08} className="mt-3 w-full max-w-3xl self-start">
+        <p className="text-sm text-primary md:text-base">
+          Explore how I consistently delivered maximum results in my previous
+          projects.
+        </p>
+      </Reveal>
+      <ProjectListProjectSection />
       <ProjectGetInTouchSection />
     </div>
   );

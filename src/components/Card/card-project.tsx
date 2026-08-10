@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { GithubLogo, ArrowSquareOut } from "@phosphor-icons/react";
 import Image from "next/image";
 import { LoadingSpinner } from "@/components";
 
@@ -22,7 +22,7 @@ export default function CardProject(props) {
   };
 
   return (
-    <div className="w-[330px] rounded-xl bg-accent/10 px-7 py-5 text-secondary shadow-[0_8px_30px_-12px_rgba(0,0,0,0)] transition-[color,box-shadow] duration-300 hover:text-accent hover:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.5)] lg:w-[350px]">
+    <div className="w-[330px] rounded-xl border border-border_col bg-base_col_darker/60 px-7 py-5 text-secondary transition-[color,border-color] duration-300 hover:border-accent/40 hover:text-accent lg:w-[350px]">
       <div className="flex items-center justify-between">
         <a
           href={props.web ? props.web : props.github}
@@ -42,7 +42,7 @@ export default function CardProject(props) {
               title="View github repository"
               className="transition-colors hover:text-accent"
             >
-              <FiGithub size={16} />
+              <GithubLogo size={16} weight="light" />
             </a>
           )}
           {props.web && (
@@ -53,7 +53,7 @@ export default function CardProject(props) {
               title="View finished project"
               className="transition-colors hover:text-accent"
             >
-              <FiExternalLink size={18} />
+              <ArrowSquareOut size={18} weight="light" />
             </a>
           )}
         </div>
@@ -69,25 +69,25 @@ export default function CardProject(props) {
         <Image
           src={props.image}
           alt={props.name}
-          className="m-auto h-full w-full rounded-md object-cover ring-1 ring-inset ring-white/10"
+          className="m-auto h-full w-full rounded-lg object-cover ring-1 ring-inset ring-border_col"
         />
         {hover ? (
-          <div className="absolute top-0 left-0 h-full w-full rounded-md ">
+          <div className="absolute top-0 left-0 h-full w-full rounded-lg ">
             {props.gif && (
               <Image
                 src={props.gif}
                 alt={props.name}
                 onLoad={() => setLoading(false)}
-                className="m-auto h-full rounded-md object-cover ring-1 ring-inset ring-white/10"
+                className="m-auto h-full rounded-lg object-cover ring-1 ring-inset ring-border_col"
               />
             )}
-            <p className="absolute top-0 flex h-full w-full items-center justify-center bg-base_col_darker/60 text-white">
+            <p className="absolute top-0 flex h-full w-full items-center justify-center bg-base_col_darker/80 text-secondary">
               {props.gif && props.web && "Live Demo"}
               {!props.gif && props.web && "Checkout Site"}
               {!props.web && "Source Code"}
             </p>
             {loading && (
-              <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center rounded-md bg-base_col_darker/60">
+              <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center rounded-lg bg-base_col_darker/80">
                 <LoadingSpinner />
               </div>
             )}

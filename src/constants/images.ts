@@ -12,7 +12,6 @@ export const ImageNotes = "/images/notes.webp";
 export const ImageSearchmantic = '/images/searchmantic.png';
 export const ImagePortofolioV1 = "/images/portofolio-v1.webp";
 export const ImageRose = "/images/rose.webp";
-export const ImageSecret = "/images/secret.webp";
 export const ImageTravel = "/images/travel.webp";
 export const ImageShortener = '/images/shortener.png'
 export const ImageUlin = "/images/ulin.webp";

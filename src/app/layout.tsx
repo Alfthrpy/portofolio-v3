@@ -1,27 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 import "@/styles/globals.css";
-import { poppins, roboto_mono } from "@/constants/font";
+import { geistSans, geistMono } from "@/constants/font";
 import { Contact, Navbar, Footer } from "@/components";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
-
-  useEffect(() => {
-    AOS.init({});
-  }, []);
 
   const superadmin = ["/auth/superadmin", "/dashboard/superadmin"];
 
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${roboto_mono.variable} scroll-smooth `}
+      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth `}
     >
       <head />
       <body>

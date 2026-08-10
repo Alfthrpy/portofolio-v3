@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, type FC } from "react";
 import CardProject from "@/components/Card/card-project";
+import { Reveal } from "@/components";
 import { projects } from "@/utils/datas";
 
 const ListProject: FC = () => {
@@ -32,10 +33,11 @@ const ListProject: FC = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="my-10 grid grid-cols-1 gap-3 md:grid-cols-2 lg:gap-4 xl:grid-cols-3">
+      <div className="my-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-5 xl:grid-cols-3">
         {sortedData.slice(0, numToShow).map((data, index) => (
-          <div
+          <Reveal
             key={data.id}
+            delay={Math.min((index % 6) * 0.05, 0.25)}
             className="translate-y-0 cursor-pointer transition-transform duration-300 hover:-translate-y-2"
           >
             <CardProject
@@ -55,12 +57,12 @@ const ListProject: FC = () => {
               stack={data.stack}
               gif={data.gif}
             />
-          </div>
+          </Reveal>
         ))}
       </div>
       <button
         onClick={shouldShowMore() ? handleShowMore : handleShowLess}
-        className="rounded-[4px] border-2 border-accent px-7 py-4 font-mono text-accent transition-[background-color,transform] duration-300 hover:bg-accent hover:bg-opacity-10 active:scale-[0.96]"
+        className="rounded-lg border-2 border-accent px-7 py-4 font-mono text-accent transition-[background-color,transform] duration-300 hover:bg-accent hover:bg-opacity-10 active:scale-[0.96]"
       >
         {shouldShowMore() ? "Show More" : "Show Less"}
       </button>

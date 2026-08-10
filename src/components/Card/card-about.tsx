@@ -19,7 +19,7 @@ const CardAbout: FC<CardAboutProps> = (props) => {
 
   return (
     <div
-      className="flex items-center gap-2 rounded border border-accent px-2 py-2 hover:bg-accent hover:bg-opacity-10 md:gap-3 lg:px-3"
+      className="flex items-center gap-2 rounded-lg border border-border_col px-2 py-2 transition-colors duration-300 hover:border-accent hover:bg-accent hover:bg-opacity-10 md:gap-3 lg:px-3"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

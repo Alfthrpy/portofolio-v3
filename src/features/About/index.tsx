@@ -2,8 +2,7 @@ import type { FC } from "react";
 import {
   AboutExperienceSection,
   AboutHeaderSection,
-  AboutTechstackSection,
-  AboutToolusedSection,
+  AboutStackSection,
 } from "./section";
 
 const About: FC = () => {
@@ -11,8 +10,7 @@ const About: FC = () => {
     <>
       <AboutHeaderSection />
       <AboutExperienceSection />
-      <AboutTechstackSection />
-      <AboutToolusedSection />
+      <AboutStackSection />
     </>
   );
 };

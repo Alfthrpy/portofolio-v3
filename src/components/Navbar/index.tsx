@@ -2,68 +2,48 @@
 
 import { NAVBAR_ITEMS } from "@/constants/components";
 import Link from "next/link";
-import React, { useState, useEffect, useRef } from "react";
-import { BiMenuAltRight, BiX } from "react-icons/bi";
+import React, { useState, useRef } from "react";
+import { List, X } from "@phosphor-icons/react";
+import { useMotionValueEvent, useScroll } from "motion/react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+  const [isNavbarHidden, setIsNavbarHidden] = useState(false);
   const [isPageTop, setIsPageTop] = useState(true);
-  const previousCurrentScrollPosition = useRef(0);
+  const previousScrollY = useRef(0);
+  const { scrollY } = useScroll();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPosition = window.pageYOffset;
-      setIsPageTop(currentScrollPosition === 0);
-      if (
-        previousCurrentScrollPosition.current < currentScrollPosition &&
-        !isNavbarVisible
-      ) {
-        setIsNavbarVisible(true);
-      } else if (
-        previousCurrentScrollPosition.current > currentScrollPosition &&
-        isNavbarVisible
-      ) {
-        setIsNavbarVisible(false);
-      }
-      previousCurrentScrollPosition.current = currentScrollPosition;
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isNavbarVisible]);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
+  useMotionValueEvent(scrollY, "change", (current) => {
+    setIsPageTop(current === 0);
+    if (previousScrollY.current < current && !isNavbarHidden) {
+      setIsNavbarHidden(true);
+    } else if (previousScrollY.current > current && isNavbarHidden) {
+      setIsNavbarHidden(false);
     }
+    previousScrollY.current = current;
+  });
+
+  React.useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
 
   return (
     <div
       className={`fixed top-0 z-[98] w-screen ${
-        !isNavbarVisible
+        !isNavbarHidden
           ? !isPageTop
-            ? `translate-y-0  bg-base_col shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out ${
+            ? `translate-y-0 border-b border-border_col bg-base_col shadow-[0_10px_30px_-10px_rgba(0,0,0,0.4)] transition-all duration-300 ease-in-out ${
                 !isOpen ? "bg-opacity-80 backdrop-blur-md" : "bg-opacity-100"
               }`
-            : " bg-base_col bg-opacity-80 py-3 transition-all"
+            : "bg-base_col bg-opacity-80 py-2 transition-all"
           : `transition-all duration-300 ease-in-out ${
               !isPageTop ? "-translate-y-full" : "translate-y-0"
             } `
       }`}
     >
-      <div className="flex h-24 items-center justify-between px-7 lg:px-14">
+      <div className="flex h-16 items-center justify-between px-7 lg:h-20 lg:px-14">
         <Link href="/" className="text-accent" scroll={false}>
-          <h1
-            className="text-2xl font-semibold"
-            data-aos="fade-down"
-            data-aos-once="true"
-          >
-            Alfthrpy
-          </h1>
+          <h1 className="font-mono text-lg font-semibold">Alfthrpy</h1>
         </Link>
 
         {/* Hamburger Button */}
@@ -73,39 +53,32 @@ export default function Navbar() {
               !isOpen ? "Open Navigation Menu" : "Close Navigation Menu"
             }
             onClick={() => setIsOpen(!isOpen)}
-            className="relative z-30 h-10 w-10"
+            className="relative z-30 h-9 w-9"
           >
-            <BiMenuAltRight
-              className={`absolute inset-0 h-10 w-10 fill-current text-accent transition-[opacity,transform,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)] ${
-                isOpen
-                  ? "scale-[0.25] opacity-0 blur-sm"
-                  : "scale-100 opacity-100 blur-none"
+            <List
+              className={`absolute inset-0 h-9 w-9 text-accent transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.2,0,0,1)] ${
+                isOpen ? "scale-[0.25] opacity-0" : "scale-100 opacity-100"
               }`}
             />
-            <BiX
-              className={`absolute inset-0 h-10 w-10 fill-current text-accent transition-[opacity,transform,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)] ${
-                isOpen
-                  ? "scale-100 opacity-100 blur-none"
-                  : "scale-[0.25] opacity-0 blur-sm"
+            <X
+              className={`absolute inset-0 h-9 w-9 text-accent transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.2,0,0,1)] ${
+                isOpen ? "scale-100 opacity-100" : "scale-[0.25] opacity-0"
               }`}
             />
           </button>
         </div>
 
         {/* Navbar Text */}
-        <div className="text-base-content hidden  gap-10 lg:flex">
+        <div className="hidden gap-10 lg:flex">
           {NAVBAR_ITEMS.map((item, index) => (
             <Link
               href={item.href}
-              className="flex flex-col items-end font-mono text-sm  text-primary transition-colors duration-300 hover:text-accent xl:text-base"
+              className="flex items-baseline gap-2 font-mono text-sm text-primary transition-colors duration-300 hover:text-accent"
               key={index}
-              data-aos="fade-down"
-              data-aos-delay={`${index}00`}
-              data-aos-once="true"
               scroll={false}
             >
               <span className="text-xs text-accent">{item.number}</span>
-              <p>{`// ${item.title}`}</p>
+              <span>{item.title}</span>
             </Link>
           ))}
         </div>
@@ -120,8 +93,8 @@ export default function Navbar() {
         }`}
       >
         <div className="fixed top-0 z-0 h-full w-full backdrop-blur-sm"></div>
-        <div className="fixed right-0 top-0 z-[99] h-full w-3/4 bg-base_col_darker drop-shadow-lg md:w-1/2">
-          <div className="mt-44 flex flex-col items-center justify-center gap-12 text-base md:text-lg">
+        <div className="fixed right-0 top-0 z-[99] h-full w-3/4 border-l border-border_col bg-base_col_darker drop-shadow-lg md:w-1/2">
+          <div className="mt-40 flex flex-col items-center justify-center gap-10 text-base md:text-lg">
             {NAVBAR_ITEMS.map((item, index) => (
               <Link
                 href={item.href}
@@ -129,9 +102,9 @@ export default function Navbar() {
                 key={index}
                 onClick={() => setIsOpen(false)}
               >
-                <p className="flex flex-col">
-                  <span className="text-sm text-accent">{item.number}.</span>
-                  {`${item.title}`}
+                <p className="flex flex-col items-center gap-1">
+                  <span className="text-sm text-accent">{item.number}</span>
+                  {item.title}
                 </p>
               </Link>
             ))}
