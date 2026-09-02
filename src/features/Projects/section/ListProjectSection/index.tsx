@@ -37,7 +37,7 @@ const ListProject: FC = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="my-14 flex w-full flex-col gap-16 lg:gap-24">
+      <div className="my-14 flex w-full flex-col gap-14 lg:gap-20">
         {featured.map((project, index) => (
           <FeaturedProject
             key={project.id}

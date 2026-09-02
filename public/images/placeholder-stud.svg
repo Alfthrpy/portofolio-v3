@@ -1,11 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
-  <rect width="800" height="450" fill="#151E31" />
-  <rect x="1" y="1" width="798" height="448" fill="none" stroke="#83DBFF" stroke-opacity="0.15" stroke-width="2" />
-  <g transform="translate(400,185)" fill="none" stroke="#83DBFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M -60 -10 L 0 -35 L 60 -10 L 0 15 Z" />
-    <path d="M -35 0 L -35 30 C -35 42 -18 52 0 52 C 18 52 35 42 35 30 L 35 0" />
-    <line x1="60" y1="-10" x2="60" y2="25" />
+  <rect width="800" height="450" fill="#121317" />
+  <g stroke="#1D1F26" stroke-width="1">
+    <path d="M0 112.5 H800" />
+    <path d="M0 225 H800" />
+    <path d="M0 337.5 H800" />
+    <path d="M200 0 V450" />
+    <path d="M400 0 V450" />
+    <path d="M600 0 V450" />
   </g>
-  <text x="400" y="300" font-family="monospace" font-size="28" fill="#E5E7EB" text-anchor="middle">STUD</text>
-  <text x="400" y="332" font-family="monospace" font-size="15" fill="#9CA3AF" text-anchor="middle">preview image coming soon</text>
+  <g stroke="#2A2D36" stroke-width="1.5" fill="none">
+    <path d="M110 90 L230 60 L340 120" />
+    <path d="M110 90 L190 200" />
+    <path d="M230 60 L300 180 L190 200" />
+    <path d="M340 120 L300 180" />
+    <path d="M190 200 L260 300 L360 260" />
+    <path d="M300 180 L360 260" />
+    <path d="M140 340 L260 300" />
+    <path d="M120 150 L110 90" />
+  </g>
+  <g fill="#5FD4FF">
+    <circle cx="230" cy="60" r="4" />
+    <circle cx="300" cy="180" r="5" />
+    <circle cx="360" cy="260" r="4" />
+  </g>
+  <g fill="#4A4E59">
+    <circle cx="110" cy="90" r="3" />
+    <circle cx="340" cy="120" r="3" />
+    <circle cx="190" cy="200" r="3" />
+    <circle cx="260" cy="300" r="3" />
+    <circle cx="140" cy="340" r="3" />
+    <circle cx="120" cy="150" r="3" />
+  </g>
+  <text x="520" y="215" font-family="'Geist Mono','JetBrains Mono',monospace" font-size="42" font-weight="600" letter-spacing="6" fill="#F2F3F5" text-anchor="middle">STUD</text>
+  <text x="520" y="248" font-family="'Geist Mono','JetBrains Mono',monospace" font-size="13" fill="#93969F" text-anchor="middle">multi-agent slide deck pipeline</text>
+  <text x="520" y="286" font-family="'Geist Mono','JetBrains Mono',monospace" font-size="11" letter-spacing="2" fill="#5FD4FF" opacity="0.75" text-anchor="middle">PREVIEW</text>
 </svg>
