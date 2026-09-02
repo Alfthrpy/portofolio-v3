@@ -21,7 +21,7 @@ import PandasIcon from "@icons/pandas.jpg";
 import JavaIcon from "@icons/java.svg";
 
 // Project Images
-import purrstation from "@images/placeholder-purrstation.svg";
+import purrstation from "@images/purrstation.png";
 import stud from "@images/placeholder-stud.svg";
 import iris from "@images/iris.png";
 import Ebuddy from "@images/ebuddy.png";
@@ -35,6 +35,7 @@ import ukm from "@images/ukm.png"
 import tenangin from "@images/tenangin.png"
 
 // Gif Images
+import studGif from "@gif/stud.gif";
 import mikkuGif from "@gif/mikku.gif";
 import ttsGif from "@gif/tts.gif";
 import ebuddyGif from "@gif/ebuddy.gif";
@@ -80,7 +81,7 @@ const projects = [
     web: "",
     repo: "https://github.com/Alfthrpy/STUD",
     stack: "Python, CrewAI, ChromaDB, Streamlit, Docling, Sentence Transformers",
-    gif: null,
+    gif: studGif,
   },
   {
     id: 15,

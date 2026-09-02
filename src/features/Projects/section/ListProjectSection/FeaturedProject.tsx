@@ -1,10 +1,29 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { GithubLogo, ArrowSquareOut } from "@phosphor-icons/react";
 import Image from "next/image";
 import { Reveal } from "@/components";
+import { useHasHover } from "@/hooks/useHasHover";
 
 export default function FeaturedProject({ project, flip, index }) {
+  const [hover, setHover] = useState(false);
+  const [inView, setInView] = useState(false);
+  const imageRef = useRef(null);
+  const hasHover = useHasHover();
+
+  useEffect(() => {
+    if (!project.gif || !imageRef.current || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.5 }
+    );
+    observer.observe(imageRef.current);
+    return () => observer.disconnect();
+  }, [project.gif]);
+
+  const showGif = project.gif && (hasHover ? hover : inView);
+
   const stacks = project.stack.split(",").map((s) => s.trim());
 
   const primaryBtn =
@@ -15,7 +34,12 @@ export default function FeaturedProject({ project, flip, index }) {
   return (
     <Reveal>
       <article className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
-        <div className={`lg:col-span-7 ${flip ? "lg:order-2" : ""}`}>
+        <div
+          ref={imageRef}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          className={`lg:col-span-7 ${flip ? "lg:order-2" : ""}`}
+        >
           <a
             href={project.web || project.repo}
             target="_blank"
@@ -23,7 +47,7 @@ export default function FeaturedProject({ project, flip, index }) {
             className="group block rounded-xl transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99]"
           >
             <Image
-              src={project.image}
+              src={showGif ? project.gif : project.image}
               alt={project.name}
               width={800}
               height={450}
