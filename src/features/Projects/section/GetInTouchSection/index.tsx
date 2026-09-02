@@ -13,7 +13,7 @@ const GetInTouchSection: FC = () => {
         </h1>
       </Reveal>
       <Reveal delay={0.12}>
-        <p className="w-full pb-8 text-sm leading-relaxed text-primary md:w-5/6 md:text-base lg:w-4/6 xl:w-1/2">
+        <p className="w-full pb-8 text-sm leading-relaxed text-primary md:w-5/6 md:text-justify md:text-base lg:w-4/6 xl:w-1/2">
           I am currently seeking job opportunities to gain more experience in
           the industry. Whether you have any questions or simply want to say
           hi, I will do my best to get back to you!
