@@ -18,6 +18,15 @@ body {
   @apply rounded-full border-[3px] border-solid border-base_col bg-primary;
 }
 
+@layer base {
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #5fd4ff;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
 @layer components {
   .text-underline {
     position: relative;
@@ -51,6 +60,12 @@ body {
 .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transform-origin: 40px 40px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lds-roller div {
+    animation: none;
+  }
 }
 .lds-roller div:after {
   content: " ";

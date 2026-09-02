@@ -143,7 +143,7 @@ export const ContentWorkExperience = () => {
           icon: laravelIcon,
         },
         {
-          name: "Bootsrap",
+          name: "Bootstrap",
           icon: bootstrapIcon,
         },
         {

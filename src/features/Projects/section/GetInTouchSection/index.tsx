@@ -22,7 +22,7 @@ const GetInTouchSection: FC = () => {
       <Reveal delay={0.18}>
         <a
           href="mailto:alfthr378@gmail.com"
-          className="inline-block rounded-lg border-2 border-accent px-7 py-4 font-mono text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10"
+          className="inline-block rounded-lg border-2 border-accent px-7 py-4 font-mono text-accent transition-[background-color,transform] duration-300 hover:bg-accent hover:bg-opacity-10 active:scale-[0.96]"
         >
           Say Hello
         </a>

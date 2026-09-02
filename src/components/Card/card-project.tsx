@@ -1,13 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GithubLogo, ArrowSquareOut } from "@phosphor-icons/react";
 import Image from "next/image";
 import { LoadingSpinner } from "@/components";
+import { useHasHover } from "@/hooks/useHasHover";
 
 export default function CardProject(props) {
   const [hover, setHover] = useState(false);
+  const [inView, setInView] = useState(false);
+  const imageRef = useRef(null);
   const { loading, setLoading } = props;
+  const hasHover = useHasHover();
+
+  useEffect(() => {
+    if (!props.gif || !imageRef.current || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.5 }
+    );
+    observer.observe(imageRef.current);
+    return () => observer.disconnect();
+  }, [props.gif]);
+
+  const showGif = props.gif && (hasHover ? hover : inView);
 
   const handleClick = (url) => {
     window.open(url, "_blank");
@@ -22,7 +38,7 @@ export default function CardProject(props) {
   };
 
   return (
-    <div className="w-[330px] rounded-xl border border-border_col bg-base_col_darker/60 px-7 py-5 text-secondary transition-[color,border-color] duration-300 hover:border-accent/40 hover:text-accent lg:w-[350px]">
+    <div className="mx-auto w-full max-w-[350px] rounded-xl border border-border_col bg-base_col_darker/60 px-7 py-5 text-secondary transition-[color,border-color] duration-300 hover:border-accent/40 hover:text-accent">
       <div className="flex items-center justify-between">
         <a
           href={props.web ? props.web : props.github}
@@ -40,7 +56,7 @@ export default function CardProject(props) {
               target="_blank"
               rel="noreferrer"
               title="View github repository"
-              className="transition-colors hover:text-accent"
+              className="p-1 transition-colors hover:text-accent"
             >
               <GithubLogo size={16} weight="light" />
             </a>
@@ -51,7 +67,7 @@ export default function CardProject(props) {
               target="_blank"
               rel="noreferrer"
               title="View finished project"
-              className="transition-colors hover:text-accent"
+              className="p-1 transition-colors hover:text-accent"
             >
               <ArrowSquareOut size={18} weight="light" />
             </a>
@@ -59,6 +75,7 @@ export default function CardProject(props) {
         </div>
       </div>
       <div
+        ref={imageRef}
         onClick={() => {
           handleClick(props.web ? props.web : props.github);
         }}
@@ -71,21 +88,20 @@ export default function CardProject(props) {
           alt={props.name}
           className="m-auto h-full w-full rounded-lg object-cover ring-1 ring-inset ring-border_col"
         />
-        {hover ? (
+        {showGif ? (
           <div className="absolute top-0 left-0 h-full w-full rounded-lg ">
-            {props.gif && (
-              <Image
-                src={props.gif}
-                alt={props.name}
-                onLoad={() => setLoading(false)}
-                className="m-auto h-full rounded-lg object-cover ring-1 ring-inset ring-border_col"
-              />
+            <Image
+              src={props.gif}
+              alt={`${props.name} demo`}
+              onLoad={() => setLoading(false)}
+              className="m-auto h-full rounded-lg object-cover ring-1 ring-inset ring-border_col"
+            />
+            {hasHover && (
+              <p className="absolute top-0 flex h-full w-full items-center justify-center bg-base_col_darker/80 text-secondary">
+                {props.web && "Live Demo"}
+                {!props.web && "Source Code"}
+              </p>
             )}
-            <p className="absolute top-0 flex h-full w-full items-center justify-center bg-base_col_darker/80 text-secondary">
-              {props.gif && props.web && "Live Demo"}
-              {!props.gif && props.web && "Checkout Site"}
-              {!props.web && "Source Code"}
-            </p>
             {loading && (
               <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center rounded-lg bg-base_col_darker/80">
                 <LoadingSpinner />

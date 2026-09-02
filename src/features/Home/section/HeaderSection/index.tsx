@@ -40,6 +40,15 @@ const HeaderSection: FC = () => {
             </a>
           </div>
         </Reveal>
+
+        <div className="mt-12 flex justify-end lg:hidden" aria-hidden="true">
+          <Reveal delay={0.3}>
+            <GraphMotif
+              className="h-auto w-56 text-border_col opacity-70"
+              variant="sparse"
+            />
+          </Reveal>
+        </div>
       </div>
 
       <div className="hidden lg:block" aria-hidden="true">

@@ -9,11 +9,3 @@ export interface CardAboutProps {
   title: string;
   informationLevel: string;
 }
-
-export interface PageWrapperProps {
-  children: React.ReactNode;
-  noNavbar?: boolean;
-  noContact?: boolean;
-  noFooter?: boolean;
-  noContainer?: boolean;
-}

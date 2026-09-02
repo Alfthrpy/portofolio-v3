@@ -2,30 +2,34 @@
 import { useState, useEffect, type FC } from "react";
 import CardProject from "@/components/Card/card-project";
 import { Reveal, TiltCard } from "@/components";
+import FeaturedProject from "./FeaturedProject";
 import { projects } from "@/utils/datas";
+
+const FEATURED_NAMES = ["STUD", "Purrstation"];
 
 const ListProject: FC = () => {
   const [numToShow, setNumToShow] = useState(6);
   const [loading, setLoading] = useState([]);
 
-  const dataArray = Object.keys(projects).map((key) => {
-    return { id: key, ...projects[key] };
-  });
-
-  const sortedData = [...dataArray].sort((a, b) => (a.id < b.id ? 1 : -1));
+  const featured = projects.filter((project) =>
+    FEATURED_NAMES.includes(project.name)
+  );
+  const rest = projects
+    .filter((project) => !FEATURED_NAMES.includes(project.name))
+    .sort((a, b) => (a.id < b.id ? 1 : -1));
 
   const handleShowMore = () => {
     setNumToShow(numToShow + 6);
   };
 
   useEffect(() => {
-    if (numToShow > sortedData.length) {
-      setNumToShow(sortedData.length);
+    if (numToShow > rest.length) {
+      setNumToShow(rest.length);
     }
-  }, [numToShow, sortedData.length]);
+  }, [numToShow, rest.length]);
 
   const shouldShowMore = () => {
-    return numToShow < sortedData.length;
+    return numToShow < rest.length;
   };
 
   const handleShowLess = () => {
@@ -33,8 +37,18 @@ const ListProject: FC = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="my-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-5 xl:grid-cols-3">
-        {sortedData.slice(0, numToShow).map((data, index) => (
+      <div className="my-14 flex w-full flex-col gap-16 lg:gap-24">
+        {featured.map((project, index) => (
+          <FeaturedProject
+            key={project.id}
+            project={project}
+            flip={index % 2 === 1}
+            index={index}
+          />
+        ))}
+      </div>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-5 xl:grid-cols-3">
+        {rest.slice(0, numToShow).map((data, index) => (
           <Reveal key={data.id} delay={Math.min((index % 6) * 0.05, 0.25)}>
             <TiltCard className="cursor-pointer transition-shadow duration-300 hover:shadow-[0_24px_48px_-24px_rgba(95,212,255,0.25)]">
               <CardProject

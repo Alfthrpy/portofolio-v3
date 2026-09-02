@@ -65,7 +65,7 @@ const stacks = {
   Bootstrap: { name: "Bootstrap", src: bootstrapIcon, level: "Intermediate" },
   Tailwind: { name: "TailwindCSS", src: tailwindIcon, level: "Advanced" },
   MySQL: { name: "MySQL", src: mysqlIcon, level: "Intermediate" },
-  MongoDB: { name: "MongoDB", src: mongodbIcon, level: "Beginer" },
+  MongoDB: { name: "MongoDB", src: mongodbIcon, level: "Beginner" },
   Python : { name: "Python", src: pythonIcon, level: "Advanced" },
   Pandas : { name: "Pandas", src:PandasIcon, level: "Advanced" },
   Java : { name: "Java", src: JavaIcon, level: "Intermediate"}
@@ -93,7 +93,7 @@ const projects = [
     gif: null,
   },
   {
-    id: 12,
+    id: 14,
     name: "Tenangin",
     desc: "Tenangin is a mental health management platform with counselor chatbot features, mood tracking, and psychological service recommendations",
     image: tenangin,
@@ -103,7 +103,7 @@ const projects = [
     gif: null,
   },
   {
-    id: 11,
+    id: 5,
     name: "Landing Page UKM LIKM",
     desc: "This is a landing page from an organization at university that includes management of news data and gallery",
     image: ukm,
@@ -113,7 +113,7 @@ const projects = [
     gif: ukmgif,
   },
   {
-    id: 10,
+    id: 8,
     name: "Chatsql",
     desc: "ChatSQL is a chatbot application that can interact directly with your database.",
     image: chatsql,
@@ -123,7 +123,7 @@ const projects = [
     gif: chatsqlgif,
   },
   {
-    id: 10,
+    id: 7,
     name: "Shortener URL API",
     desc: "URL Shortener App is a platform for shortening long URLs into shareable, compact links. It supports user management, link creation, and detailed click tracking with analytics.",
     image: shortener,
@@ -133,7 +133,7 @@ const projects = [
     gif: shortenerGif,
   },
   {
-    id: 9,
+    id: 6,
     name: "Iris Classifier",
     desc: "The Iris Classifier app predicts the species of iris flowers (Setosa, Versicolor, Virginica) based on petal and sepal measurements, offering quick and accurate results.",
     image: iris,
@@ -143,17 +143,17 @@ const projects = [
     gif: irisGif,
   },
   {
-    id: 10,
+    id: 9,
     name: "EBuddy",
     desc: "Ebuddy is an app developed for a Software Engineering project, designed to help government agencies create letters, attendance records, and out-of-office reports efficiently.",
     image: Ebuddy,
-    web: "https://github.com/Alfthrpy/ebuddy-rpl",
+    web: "",
     repo: "https://github.com/Alfthrpy/ebuddy-rpl",
     stack: "Laravel, Bootstrap",
     gif: ebuddyGif,
   },
   {
-    id: 11,
+    id: 10,
     name: "SendThePict",
     desc: "The website lets users send anonymous messages or letters by submitting images with a description of the message and recipient, offering a creative and private way to communicate.",
     image: sendthepict,
@@ -163,7 +163,7 @@ const projects = [
     gif: sendthepictGif,
   },
   {
-    id: 12,
+    id: 11,
     name: "TTS Apps",
     desc: "This website was crafted for lecture assignments, TTS Web is an interactive platform for solving crossword puzzles. It offers a fun and educational experience for puzzle enthusiasts of all ages. ",
     image: tts,
@@ -173,7 +173,7 @@ const projects = [
     gif: ttsGif,
   },
   {
-    id: 13,
+    id: 12,
     name: "Mikku",
     desc: "This website was developed to support the social-emotional development of children aged 3-4. Through inspiring stories, interactive games, and age-appropriate content.",
     image: mikku,
@@ -183,7 +183,7 @@ const projects = [
     gif: mikkuGif,
   },
   {
-    id: 14,
+    id: 13,
     name: "Searchmantic Hadits",
     desc: "Semantic-based Search Engine Platform For Hadits. Searchmantic Hadits is a search engine designed to help users quickly and accurately find hadith using keyword-based searches.",
     image: searchmantic,

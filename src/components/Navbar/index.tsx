@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed top-0 z-[98] w-screen ${
+      className={`fixed top-0 z-[98] w-full ${
         !isNavbarHidden
           ? !isPageTop
             ? `translate-y-0 border-b border-border_col bg-base_col shadow-[0_10px_30px_-10px_rgba(0,0,0,0.4)] transition-all duration-300 ease-in-out ${
@@ -53,15 +53,15 @@ export default function Navbar() {
               !isOpen ? "Open Navigation Menu" : "Close Navigation Menu"
             }
             onClick={() => setIsOpen(!isOpen)}
-            className="relative z-30 h-9 w-9"
+            className="relative z-30 flex h-11 w-11 items-center justify-center"
           >
             <List
-              className={`absolute inset-0 h-9 w-9 text-accent transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.2,0,0,1)] ${
+              className={`absolute h-9 w-9 text-accent transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.2,0,0,1)] ${
                 isOpen ? "scale-[0.25] opacity-0" : "scale-100 opacity-100"
               }`}
             />
             <X
-              className={`absolute inset-0 h-9 w-9 text-accent transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.2,0,0,1)] ${
+              className={`absolute h-9 w-9 text-accent transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.2,0,0,1)] ${
                 isOpen ? "scale-100 opacity-100" : "scale-[0.25] opacity-0"
               }`}
             />
@@ -86,7 +86,7 @@ export default function Navbar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 h-screen w-full lg:hidden ${
+        className={`fixed top-0 h-[100dvh] w-full lg:hidden ${
           !isOpen
             ? "translate-x-full transition-all duration-300 ease-in"
             : "translate-x-0 transition-all duration-300 ease-out"

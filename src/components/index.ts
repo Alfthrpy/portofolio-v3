@@ -9,3 +9,4 @@ export const LoadingSpinner = dynamic(() => import("./LoadingSpinner"));
 export { default as Reveal } from "./Reveal";
 export { default as GrainOverlay } from "./GrainOverlay";
 export { default as TiltCard } from "./TiltCard";
+export { default as Chrome } from "./Chrome";
