@@ -75,7 +75,6 @@ export default function Navbar() {
               key={index}
               scroll={false}
             >
-              <span className="mr-2">{item.number}</span>
               {item.title}
             </Link>
           ))}
@@ -97,7 +96,6 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               scroll={false}
             >
-              <span className="mr-3 font-mono text-base">{item.number}</span>
               {item.title}
             </Link>
           ))}

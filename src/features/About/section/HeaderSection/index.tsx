@@ -9,7 +9,7 @@ const HeaderSection: FC = () => {
       <div className="flex max-w-2xl flex-col justify-center">
         <Reveal>
           <div className="flex items-center gap-5 pb-8">
-            <p className="section-label">02. About Me</p>
+            <p className="section-label">About Me</p>
             <div className="h-[3px] w-32 bg-ink md:w-64" />
           </div>
         </Reveal>

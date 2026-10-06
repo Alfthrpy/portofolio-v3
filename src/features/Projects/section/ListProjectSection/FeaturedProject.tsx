@@ -51,9 +51,6 @@ export default function FeaturedProject({ project, flip, index }) {
           </a>
         </div>
         <div className={`lg:col-span-5 ${flip ? "lg:order-1" : ""}`}>
-          <p className="font-mono text-sm font-bold uppercase tracking-[2px]">
-            Featured / 0{index + 1}
-          </p>
           <h2 className="mt-2 font-display text-[32px] leading-[1.1] text-ink">
             {project.name}
           </h2>

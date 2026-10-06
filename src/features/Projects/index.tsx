@@ -9,7 +9,6 @@ const Project: FC = () => {
   return (
     <div className="mt-32 flex flex-col md:mt-40">
       <Reveal>
-        <p className="section-label">03.</p>
         <h1 className="mt-2 font-display text-[40px] leading-[1.0] text-ink md:text-[64px]">
           Past Project Experience
         </h1>
