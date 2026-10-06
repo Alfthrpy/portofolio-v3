@@ -90,7 +90,7 @@ export const ContentCertification = () => {
           <div key={index}>
             <h3 className="pb-3 text-lg font-display leading-loose text-ink md:text-xl">
               {vendor.type}
-              <span className="text-base text-linkblue">
+              <span className="text-base text-ink">
                 {" "}
                 @
                 <a
@@ -111,7 +111,7 @@ export const ContentCertification = () => {
                       href={item.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="static items-center justify-start transition-colors duration-150 hover:text-linkblue md:inline-flex"
+                      className="static items-center justify-start transition-colors duration-150 hover:bg-ink hover:text-paper md:inline-flex"
                     >
                       {item.name}
                     </a>

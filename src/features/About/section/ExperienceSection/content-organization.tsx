@@ -34,7 +34,7 @@ export const ContentOrganization = () => {
         <div key={index}>
           <h3 className="text-lg font-display leading-loose text-ink md:text-xl">
             {data.title}
-            <span className="text-base text-linkblue">
+            <span className="text-base text-ink">
               {" "}
               @
               <a

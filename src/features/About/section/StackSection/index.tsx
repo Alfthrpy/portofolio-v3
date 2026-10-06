@@ -23,7 +23,7 @@ const StackSection: FC = () => {
             className={` px-3 py-1.5 transition-colors duration-150 ${
               active === "stack"
                 ? "bg-ink text-paper"
-                : "text-ink hover:text-linkblue"
+                : "text-ink hover:bg-ink hover:text-paper"
             }`}
           >
             Languages &amp; Frameworks
@@ -33,7 +33,7 @@ const StackSection: FC = () => {
             className={` px-3 py-1.5 transition-colors duration-150 ${
               active === "tools"
                 ? "bg-ink text-paper"
-                : "text-ink hover:text-linkblue"
+                : "text-ink hover:bg-ink hover:text-paper"
             }`}
           >
             Tools

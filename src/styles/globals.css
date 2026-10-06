@@ -33,9 +33,9 @@ body {
 }
 
 @layer components {
-  /* Inline content link: hyperlink blue, underline. Hover inverts. */
+  /* Inline content link: black underline. Hover inverts. */
   .text-underline {
-    @apply cursor-pointer text-linkblue underline underline-offset-2;
+    @apply cursor-pointer text-ink underline decoration-2 underline-offset-2;
   }
   .text-underline:hover {
     @apply bg-ink text-paper no-underline;
@@ -60,12 +60,12 @@ body {
     @apply bg-ink text-paper;
   }
 
-  /* RawBlock Ghost button: no border, underline, hover blue. */
+  /* RawBlock Ghost button: no border, underline, hover inverts. */
   .btn-ghost {
     @apply underline underline-offset-4 text-ink;
   }
   .btn-ghost:hover {
-    @apply text-linkblue;
+    @apply bg-ink text-paper no-underline;
   }
 
   /* RawBlock Filter chip: 2px border, square, uppercase mono. */

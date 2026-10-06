@@ -13,7 +13,7 @@ const CardAbout: FC<CardAboutProps> = (props) => {
         <Image src={images} alt={title} className="h-full w-full object-contain" />
       </div>
       <div className="min-w-0">
-        <div className="truncate font-display text-lg text-ink group-hover:text-paper">
+        <div className="font-display text-base leading-tight text-ink group-hover:text-paper">
           {title}
         </div>
         <div className="mt-1 font-mono text-xs font-bold uppercase tracking-[1px] text-ink group-hover:text-paper">

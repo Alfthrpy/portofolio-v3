@@ -33,7 +33,7 @@ export const ContentAward = () => {
         <li> Won the IICYMS competition Gold Medal in the Computer Science category, where my team developed a semantic search engine application for the Quran. </li>
         <li> Collaboratively designed and implemented an innovative solution that enhances users' ability to search and access Quranic content effectively. </li>
         <li> Recognized for our creativity and technical expertise in addressing complex challenges within the project, leading to our success in the competition. </li>
-        <li>Link Application : <a className="text-linkblue" href="https://beta-sequran.vercel.app/">Sequran</a></li>
+        <li>Link Application : <a className="text-underline" href="https://beta-sequran.vercel.app/">Sequran</a></li>
         </>
       ),
     },
@@ -46,7 +46,7 @@ export const ContentAward = () => {
         <div key={index}>
           <h3 className="text-lg font-display leading-loose text-ink md:text-xl">
             {data.title}
-            <span className="text-base text-linkblue">
+            <span className="text-base text-ink">
               {" "}
               @
               <a

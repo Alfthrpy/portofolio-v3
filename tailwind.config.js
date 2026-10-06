@@ -18,7 +18,6 @@ module.exports = {
         // RawBlock: raw black on white. No grays, no tints.
         ink: "#000000",
         paper: "#FFFFFF",
-        linkblue: "#0000FF",
         success: "#008000",
         warning: "#FFA500",
         error: "#FF0000",

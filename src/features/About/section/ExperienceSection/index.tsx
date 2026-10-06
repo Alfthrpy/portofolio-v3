@@ -58,7 +58,7 @@ const ExperienceSection: FC = () => {
               </button>
             ))}
           </div>
-          <div className="h-[480px] w-full max-w-[600px] overflow-auto">
+          <div className="min-h-[420px] w-full max-w-[600px] overflow-auto">
             {selectedContent}
           </div>
         </Reveal>
