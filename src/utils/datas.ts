@@ -19,6 +19,14 @@ import typescriptIcon from "@icons/typescript.svg";
 import pythonIcon from "@icons/python.svg";
 import PandasIcon from "@icons/pandas.jpg";
 import JavaIcon from "@icons/java.svg";
+import nestjsIcon from "@icons/nestjs.svg";
+import kafkaIcon from "@icons/apachekafka.svg";
+import postgresqlIcon from "@icons/postgresql.svg";
+import dockerIcon from "@icons/docker.svg";
+import prismaIcon from "@icons/prisma.svg";
+import redisIcon from "@icons/redis.svg";
+import grafanaIcon from "@icons/grafana.svg";
+import nginxIcon from "@icons/nginx.svg";
 
 // Project Images
 import purrstation from "@images/purrstation.png";
@@ -69,7 +77,15 @@ const stacks = {
   MongoDB: { name: "MongoDB", src: mongodbIcon, level: "Beginner" },
   Python : { name: "Python", src: pythonIcon, level: "Advanced" },
   Pandas : { name: "Pandas", src:PandasIcon, level: "Advanced" },
-  Java : { name: "Java", src: JavaIcon, level: "Intermediate"}
+  Java : { name: "Java", src: JavaIcon, level: "Intermediate"},
+  NestJS : { name: "NestJS", src: nestjsIcon, level: "Intermediate" },
+  Kafka : { name: "Kafka", src: kafkaIcon, level: "Intermediate" },
+  PostgreSQL : { name: "PostgreSQL", src: postgresqlIcon, level: "Intermediate" },
+  Docker : { name: "Docker", src: dockerIcon, level: "Intermediate" },
+  Prisma : { name: "Prisma", src: prismaIcon, level: "Intermediate" },
+  Redis : { name: "Redis", src: redisIcon, level: "Intermediate" },
+  Grafana : { name: "Grafana", src: grafanaIcon, level: "Intermediate" },
+  Nginx : { name: "Nginx", src: nginxIcon, level: "Intermediate" },
 };
 
 const projects = [
