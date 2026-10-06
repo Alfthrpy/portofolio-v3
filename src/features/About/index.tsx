@@ -1,16 +1,20 @@
 import type { FC } from "react";
 import {
-  AboutExperienceSection,
-  AboutHeaderSection,
-  AboutStackSection,
+  Masthead,
+  PhotoStrip,
+  Bio,
+  Chapters,
+  StackChapter,
 } from "./section";
 
 const About: FC = () => {
   return (
     <>
-      <AboutHeaderSection />
-      <AboutExperienceSection />
-      <AboutStackSection />
+      <Masthead />
+      <PhotoStrip />
+      <Bio />
+      <Chapters />
+      <StackChapter />
     </>
   );
 };

@@ -1,7 +1,5 @@
-import dynamic from "next/dynamic";
-
-export const AboutHeaderSection = dynamic(() => import("./HeaderSection"));
-export const AboutExperienceSection = dynamic(
-  () => import("./ExperienceSection")
-);
-export const AboutStackSection = dynamic(() => import("./StackSection"));
+export { default as Masthead } from "./Masthead";
+export { default as PhotoStrip } from "./PhotoStrip";
+export { default as Bio } from "./Bio";
+export { default as Chapters } from "./Chapters";
+export { default as StackChapter } from "./StackChapter";
