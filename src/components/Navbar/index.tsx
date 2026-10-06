@@ -29,21 +29,19 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed top-0 z-[98] w-full ${
+      className={`fixed top-0 z-[98] w-full border-b-[3px] border-ink bg-paper ${
         !isNavbarHidden
-          ? !isPageTop
-            ? `translate-y-0 border-b border-border_col bg-base_col shadow-[0_10px_30px_-10px_rgba(0,0,0,0.4)] transition-all duration-300 ease-in-out ${
-                !isOpen ? "bg-opacity-80 backdrop-blur-md" : "bg-opacity-100"
-              }`
-            : "bg-base_col bg-opacity-80 py-2 transition-all"
-          : `transition-all duration-300 ease-in-out ${
+          ? "translate-y-0 transition-transform duration-300 ease-in-out"
+          : `transition-transform duration-300 ease-in-out ${
               !isPageTop ? "-translate-y-full" : "translate-y-0"
-            } `
+            }`
       }`}
     >
-      <div className="flex h-16 items-center justify-between px-7 lg:h-20 lg:px-14">
-        <Link href="/" className="text-accent" scroll={false}>
-          <h1 className="font-mono text-lg font-semibold">Alfthrpy</h1>
+      <div className="flex h-16 items-center justify-between px-6 lg:h-20 lg:px-14">
+        <Link href="/" scroll={false} aria-label="Home">
+          <span className="font-display text-xl tracking-wide text-ink">
+            ALFTHRPY
+          </span>
         </Link>
 
         {/* Hamburger Button */}
@@ -53,63 +51,57 @@ export default function Navbar() {
               !isOpen ? "Open Navigation Menu" : "Close Navigation Menu"
             }
             onClick={() => setIsOpen(!isOpen)}
-            className="relative z-30 flex h-11 w-11 items-center justify-center"
+            className="relative z-30 flex h-11 w-11 items-center justify-center border-[3px] border-ink text-ink"
           >
             <List
-              className={`absolute h-9 w-9 text-accent transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.2,0,0,1)] ${
-                isOpen ? "scale-[0.25] opacity-0" : "scale-100 opacity-100"
+              className={`absolute h-7 w-7 transition-opacity duration-200 ${
+                isOpen ? "opacity-0" : "opacity-100"
               }`}
             />
             <X
-              className={`absolute h-9 w-9 text-accent transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.2,0,0,1)] ${
-                isOpen ? "scale-100 opacity-100" : "scale-[0.25] opacity-0"
+              className={`absolute h-7 w-7 transition-opacity duration-200 ${
+                isOpen ? "opacity-100" : "opacity-0"
               }`}
             />
           </button>
         </div>
 
-        {/* Navbar Text */}
-        <div className="hidden gap-10 lg:flex">
+        {/* Navbar Links */}
+        <nav className="hidden items-stretch gap-2 lg:flex">
           {NAVBAR_ITEMS.map((item, index) => (
             <Link
               href={item.href}
-              className="flex items-baseline gap-2 font-mono text-sm text-primary transition-colors duration-300 hover:text-accent"
+              className="border-[3px] border-transparent px-4 py-2 font-mono text-sm font-bold uppercase tracking-[2px] text-ink hover:border-ink hover:bg-ink hover:text-paper"
               key={index}
               scroll={false}
             >
-              <span className="text-xs text-accent">{item.number}</span>
-              <span>{item.title}</span>
+              <span className="mr-2">{item.number}</span>
+              {item.title}
             </Link>
           ))}
-        </div>
+        </nav>
       </div>
 
-      {/* Sidebar */}
+      {/* Mobile menu */}
       <div
-        className={`fixed top-0 h-[100dvh] w-full lg:hidden ${
-          !isOpen
-            ? "translate-x-full transition-all duration-300 ease-in"
-            : "translate-x-0 transition-all duration-300 ease-out"
+        className={`fixed top-16 left-0 h-[calc(100dvh-4rem)] w-full border-t-[3px] border-ink bg-paper lg:hidden ${
+          !isOpen ? "hidden" : "block"
         }`}
       >
-        <div className="fixed top-0 z-0 h-full w-full backdrop-blur-sm"></div>
-        <div className="fixed right-0 top-0 z-[99] h-full w-3/4 border-l border-border_col bg-base_col_darker drop-shadow-lg md:w-1/2">
-          <div className="mt-40 flex flex-col items-center justify-center gap-10 text-base md:text-lg">
-            {NAVBAR_ITEMS.map((item, index) => (
-              <Link
-                href={item.href}
-                className="text-center font-mono text-primary hover:text-accent"
-                key={index}
-                onClick={() => setIsOpen(false)}
-              >
-                <p className="flex flex-col items-center gap-1">
-                  <span className="text-sm text-accent">{item.number}</span>
-                  {item.title}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
+        <nav className="flex flex-col p-6">
+          {NAVBAR_ITEMS.map((item, index) => (
+            <Link
+              href={item.href}
+              className="border-b-[3px] border-ink py-5 font-display text-3xl uppercase text-ink active:bg-ink active:text-paper"
+              key={index}
+              onClick={() => setIsOpen(false)}
+              scroll={false}
+            >
+              <span className="mr-3 font-mono text-base">{item.number}</span>
+              {item.title}
+            </Link>
+          ))}
+        </nav>
       </div>
     </div>
   );

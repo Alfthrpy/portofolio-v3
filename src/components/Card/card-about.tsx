@@ -1,54 +1,22 @@
 "use client";
 
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import Image from "next/image";
 import { CardAboutProps } from "@/types/Components";
 
 const CardAbout: FC<CardAboutProps> = (props) => {
   const { images, title, informationLevel } = props;
 
-  const [hover, setHover] = useState(false);
-
-  const handleMouseEnter = () => {
-    setHover(true);
-  };
-
-  const handleMouseLeave = () => {
-    setHover(false);
-  };
-
   return (
-    <div
-      className="flex items-center gap-2 rounded-lg border border-border_col px-2 py-2 transition-colors duration-300 hover:border-accent hover:bg-accent hover:bg-opacity-10 md:gap-3 lg:px-3"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div className="flex h-12 w-12 items-center justify-center p-0 lg:h-16 lg:w-16 lg:p-2">
-        <Image
-          src={images}
-          alt={title}
-          className={`drop-shadow-xl transition-[width,height] duration-300 ${
-            hover
-              ? "h-[75%] w-[75%] md:h-[85%] md:w-[85%] lg:h-full lg:w-full"
-              : "h-[65%] w-[65%] lg:h-[85%] lg:w-[85%] "
-          } `}
-        />
+    <div className="group flex items-center gap-4 border-[3px] border-ink bg-paper p-6 hover:bg-ink">
+      <div className="flex h-14 w-14 shrink-0 items-center justify-center border-[3px] border-ink bg-paper p-2">
+        <Image src={images} alt={title} className="h-full w-full object-contain" />
       </div>
-      <div className="flex items-center text-sm md:text-base lg:text-lg">
-        <div
-          className={`font-medium text-secondary transition-transform duration-300 ${
-            hover ? "-translate-y-2 md:-translate-y-3 " : "translate-y-0 "
-          }`}
-        >
+      <div className="min-w-0">
+        <div className="truncate font-display text-lg text-ink group-hover:text-paper">
           {title}
         </div>
-        <div
-          className={`${
-            hover
-              ? "translate-x-0 opacity-100"
-              : "translate-x-3 opacity-0 md:translate-x-5 lg:translate-x-10"
-          } absolute mt-6 font-mono text-[10px] text-accent transition-[opacity,transform] duration-300 md:text-xs lg:text-sm`}
-        >
+        <div className="mt-1 font-mono text-xs font-bold uppercase tracking-[1px] text-ink group-hover:text-paper">
           {informationLevel}
         </div>
       </div>

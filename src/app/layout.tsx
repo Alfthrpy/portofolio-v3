@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { geistSans, geistMono } from "@/constants/font";
+import { archivoBlack, workSans, spaceMono } from "@/constants/font";
 import { Chrome } from "@/components";
 
 export const metadata = {
@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}
+      className={`${archivoBlack.variable} ${workSans.variable} ${spaceMono.variable} scroll-smooth`}
     >
       <head />
       <body>

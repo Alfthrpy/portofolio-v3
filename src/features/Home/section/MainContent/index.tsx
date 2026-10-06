@@ -1,30 +1,28 @@
 import type { FC } from "react";
 import { Reveal } from "@/components";
-import GraphMotif from "@/components/GraphMotif";
 
 const MainContent: FC = () => {
   return (
-    <section className="relative flex min-h-[420px] w-full flex-col items-center justify-center overflow-hidden py-24 text-center">
-      <GraphMotif
-        variant="sparse"
-        className="pointer-events-none absolute inset-0 m-auto h-[420px] w-[420px] opacity-[0.15] md:h-[560px] md:w-[560px]"
-      />
-      <div className="relative z-10 flex flex-col items-center gap-4">
-        <Reveal>
-          <h2 className="text-3xl font-bold leading-tight tracking-tight text-secondary md:text-4xl lg:text-5xl">
-            Building intelligent,
-            <br />
-            reliable &amp; scalable AI solutions
-          </h2>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <p className="max-w-[46ch] text-sm text-primary md:text-base">
-            I enjoy creating advanced machine learning models and backend
-            systems to help businesses leverage data and technology
-            effectively.
-          </p>
-        </Reveal>
-      </div>
+    <section className="flex w-full flex-col border-y-[5px] border-ink bg-ink py-16 text-center md:py-24">
+      <Reveal>
+        <h2 className="mx-auto max-w-[20ch] font-display text-[32px] leading-[1.05] text-paper md:text-[48px]">
+          Building intelligent, reliable &amp; scalable AI solutions
+        </h2>
+      </Reveal>
+      <Reveal delay={0.1}>
+        <p className="mx-auto mt-6 max-w-[52ch] text-base leading-[1.6] text-paper">
+          I enjoy creating advanced machine learning models and backend
+          systems to help businesses leverage data and technology
+          effectively.
+        </p>
+      </Reveal>
+      <Reveal delay={0.18}>
+        <div className="mt-8">
+          <a href="/projects" className="btn-secondary !border-paper !bg-paper !text-ink hover:!bg-ink hover:!text-paper">
+            See the work
+          </a>
+        </div>
+      </Reveal>
     </section>
   );
 };

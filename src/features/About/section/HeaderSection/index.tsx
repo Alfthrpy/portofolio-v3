@@ -5,38 +5,34 @@ import { Reveal } from "@/components";
 
 const HeaderSection: FC = () => {
   return (
-    <section className="mt-32 flex h-auto flex-col items-center justify-between gap-10 lg:mt-6 lg:min-h-[100dvh] lg:flex-row xl:mt-0">
-      <div className="flex flex-col justify-center text-primary">
+    <section className="mt-32 flex h-auto flex-col items-start justify-between gap-10 lg:mt-10 lg:min-h-[100dvh] lg:flex-row lg:items-center">
+      <div className="flex max-w-2xl flex-col justify-center">
         <Reveal>
-          <div className="flex items-center gap-5 pb-10">
-            <h1 className="text-xl font-semibold text-secondary lg:text-2xl">
-              <span className="font-mono text-lg font-normal text-accent lg:text-xl">
-                02.{" "}
-              </span>
-              About Me
-            </h1>
-            <div className="h-[1px] w-32 bg-border_col md:w-96"></div>
+          <div className="flex items-center gap-5 pb-8">
+            <p className="section-label">02. About Me</p>
+            <div className="h-[3px] w-32 bg-ink md:w-64" />
           </div>
         </Reveal>
-        <div className="flex flex-col gap-5 pr-0 text-sm md:text-base lg:pr-10 xl:pr-0">
+        <div className="flex flex-col gap-5 text-base leading-[1.6] text-ink">
           <Reveal delay={0.06}>
             <p>
               Hello! My name is{" "}
-              <span className="text-accent">Muhammad Rizki Al-Fathir</span>,
-              an Informatics Engineering graduate with a strong interest in
-              Backend Engineering and Machine Learning. I recently interned as
-              a Backend Engineer at Tritronik Indonesia, where I worked on a
-              mediation platform handling buffering, windowing, and a
-              RocksDB-backed persistence layer. My knowledge extends to AI,
-              Machine Learning, and Deep Learning, and I'm skilled in building
-              models using ML and Neural Networks.
+              <span className="bg-ink px-1 font-semibold text-paper">
+                Muhammad Rizki Al-Fathir
+              </span>
+              , an Informatics Engineering graduate with a strong interest in
+              Backend Engineering and Machine Learning. I work as a Backend
+              Engineer at Urbansolv, building REST APIs with NestJS and
+              spatial data systems with PostgreSQL/PostGIS, and previously
+              interned at Tritronik Indonesia on high-throughput
+              event-driven data pipelines.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
             <p>
               I have strong knowledge in Backend Engineering, Machine
               Learning, and experience in web programming with Laravel and
-              Next.js. I'm skilled at creating AI models and agentic AI
+              Next.js. I&apos;m skilled at creating AI models and agentic AI
               pipelines, including Neural Networks, and I can design
               user-friendly and visually captivating websites and
               applications.
@@ -44,16 +40,24 @@ const HeaderSection: FC = () => {
           </Reveal>
           <Reveal delay={0.18}>
             <p>
-              I'm always striving to enhance my skills and stay updated with
-              the latest technologies through personal projects and
+              I&apos;m always striving to enhance my skills and stay updated
+              with the latest technologies through personal projects and
               continuous learning.
             </p>
           </Reveal>
         </div>
       </div>
-      <Reveal delay={0.16} className="pl-0 xl:pl-24">
-        <div className="overflow-hidden rounded-xl border border-border_col grayscale transition-all duration-500 hover:grayscale-0">
-          <Image src={fathir} alt="fathir" height={480} className="w-[280px] object-cover md:w-[340px]" />
+      <Reveal delay={0.16} className="shrink-0">
+        <div className="border-[3px] border-ink">
+          <Image
+            src={fathir}
+            alt="Muhammad Rizki Al-Fathir"
+            height={480}
+            className="w-[280px] object-cover grayscale md:w-[340px]"
+          />
+          <p className="border-t-[3px] border-ink bg-ink px-3 py-2 font-mono text-xs font-bold uppercase tracking-[2px] text-paper">
+            The engineer
+          </p>
         </div>
       </Reveal>
     </section>

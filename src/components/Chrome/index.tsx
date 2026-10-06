@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Contact, Navbar, Footer, GrainOverlay } from "@/components";
+import { Contact, Navbar, Footer } from "@/components";
 
 const CHROMELESS_ROUTES = ["/auth/superadmin", "/dashboard/superadmin"];
 
@@ -15,7 +15,6 @@ export default function Chrome({ children }) {
 
   return (
     <>
-      <GrainOverlay />
       <Navbar />
       <Contact />
       <main className="container">{children}</main>
