@@ -1,37 +1,41 @@
 import type { FC } from "react";
 import { Reveal } from "@/components";
-import GraphMotif from "@/components/GraphMotif";
+
+const FACTS = [
+  { label: "BASE", value: "BANDUNG, ID" },
+  { label: "FOCUS", value: "BACKEND / ML / AGENTIC AI" },
+  { label: "STATUS", value: "OPEN TO WORK" },
+  { label: "STACK", value: "PYTHON / JAVA / TS" },
+];
 
 const HeaderSection: FC = () => {
   return (
     <section className="grid min-h-[100dvh] w-full grid-cols-1 items-center gap-10 pt-28 md:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6 lg:pt-16">
-      <div className="leading-relaxed">
+      <div>
         <Reveal>
-          <p className="ml-1 pb-3 text-sm text-accent md:pb-5">
-            Hi, my name is
-          </p>
+          <p className="section-label pb-4">Hi, my name is</p>
         </Reveal>
         <Reveal delay={0.08}>
-          <h1 className="pb-1 text-4xl font-semibold tracking-tight text-secondary md:pb-3 md:text-5xl lg:text-6xl">
+          <h1 className="font-display text-[40px] leading-[1.0] text-ink md:text-[64px]">
             Muhammad Rizki Al-Fathir
           </h1>
         </Reveal>
         <Reveal delay={0.14}>
-          <h1 className="pb-6 text-4xl font-semibold tracking-tight text-primary md:pb-8 md:text-5xl lg:text-6xl">
+          <h2 className="mt-4 border-t-[3px] border-ink pt-4 font-display text-[24px] leading-[1.1] text-ink md:text-[32px]">
             I build things in AI and Web
-          </h1>
+          </h2>
         </Reveal>
         <Reveal delay={0.2}>
-          <p className="w-full text-sm leading-relaxed text-primary md:w-[480px] md:text-base">
+          <p className="mt-6 max-w-[52ch] text-base leading-[1.6] text-ink md:text-lg">
             Backend and ML Engineer building high-throughput data platforms,
             agentic AI pipelines, and full-stack apps.
           </p>
         </Reveal>
 
         <Reveal delay={0.28}>
-          <div className="mt-10 text-sm md:mt-12">
+          <div className="mt-10">
             <a
-              className="inline-block rounded-lg border-2 border-accent px-6 py-4 text-accent transition-[background-color,transform] duration-300 hover:bg-accent hover:bg-opacity-10 active:scale-[0.96]"
+              className="btn-primary"
               href="https://drive.google.com/file/d/1UmpwUriO3WTtgplwykaFzg9vnyitPejL/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
@@ -40,24 +44,30 @@ const HeaderSection: FC = () => {
             </a>
           </div>
         </Reveal>
-
-        <div className="mt-12 flex justify-end lg:hidden" aria-hidden="true">
-          <Reveal delay={0.3}>
-            <GraphMotif
-              className="h-auto w-56 text-border_col opacity-70"
-              variant="sparse"
-            />
-          </Reveal>
-        </div>
       </div>
 
-      <div className="hidden lg:block" aria-hidden="true">
-        <Reveal delay={0.3}>
-          <div className="rounded-xl border border-border_col bg-base_col_darker/40 p-6">
-            <GraphMotif className="h-auto w-full text-border_col" variant="dense" />
+      <Reveal delay={0.3}>
+        <div className="border-[3px] border-ink bg-paper">
+          <div className="border-b-[3px] border-ink bg-ink px-4 py-2">
+            <p className="font-mono text-xs font-bold uppercase tracking-[2px] text-paper">
+              Spec Sheet
+            </p>
           </div>
-        </Reveal>
-      </div>
+          <dl>
+            {FACTS.map((fact) => (
+              <div
+                key={fact.label}
+                className="grid grid-cols-[110px_1fr] border-b-[3px] border-ink last:border-b-0"
+              >
+                <dt className="border-r-[3px] border-ink px-4 py-3 font-mono text-xs font-bold uppercase tracking-[1px]">
+                  {fact.label}
+                </dt>
+                <dd className="px-4 py-3 font-mono text-sm">{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </Reveal>
     </section>
   );
 };

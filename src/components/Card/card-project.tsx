@@ -37,28 +37,30 @@ export default function CardProject(props) {
     setHover(false);
   };
 
+  const stacks = props.stack.split(",").map((s) => s.trim());
+
   return (
-    <div className="mx-auto w-full max-w-[350px] rounded-xl border border-border_col bg-base_col_darker/60 px-7 py-5 text-secondary transition-[color,border-color] duration-300 hover:border-accent/40 hover:text-accent">
-      <div className="flex items-center justify-between">
+    <div className="mx-auto flex h-full w-full flex-col border-[3px] border-ink bg-paper p-6 text-ink">
+      <div className="flex items-start justify-between gap-3">
         <a
           href={props.web ? props.web : props.github}
           target="_blank"
           rel="noreferrer"
-          className="text-xl font-semibold tracking-wide"
+          className="font-display text-xl leading-tight text-ink hover:bg-ink hover:text-paper"
         >
           {props.name}
         </a>
 
-        <div className="flex items-end gap-2 text-primary">
+        <div className="flex shrink-0 items-center gap-2">
           {props.github && (
             <a
               href={props.github}
               target="_blank"
               rel="noreferrer"
               title="View github repository"
-              className="p-1 transition-colors hover:text-accent"
+              className="border-2 border-ink p-1.5 text-ink hover:bg-ink hover:text-paper"
             >
-              <GithubLogo size={16} weight="light" />
+              <GithubLogo size={16} weight="bold" />
             </a>
           )}
           {props.web && (
@@ -67,9 +69,9 @@ export default function CardProject(props) {
               target="_blank"
               rel="noreferrer"
               title="View finished project"
-              className="p-1 transition-colors hover:text-accent"
+              className="border-2 border-ink p-1.5 text-ink hover:bg-ink hover:text-paper"
             >
-              <ArrowSquareOut size={18} weight="light" />
+              <ArrowSquareOut size={16} weight="bold" />
             </a>
           )}
         </div>
@@ -81,39 +83,45 @@ export default function CardProject(props) {
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="relative my-2 flex h-[180px] items-center justify-center transition-transform duration-150 active:scale-[0.96]"
+        className="relative my-4 flex h-[180px] cursor-pointer items-center justify-center border-[3px] border-ink"
       >
         <Image
           src={props.image}
           alt={props.name}
-          className="m-auto h-full w-full rounded-lg object-cover ring-1 ring-inset ring-border_col"
+          className="m-auto h-full w-full object-cover"
         />
         {showGif ? (
-          <div className="absolute top-0 left-0 h-full w-full rounded-lg ">
+          <div className="absolute top-0 left-0 h-full w-full">
             <Image
               src={props.gif}
               alt={`${props.name} demo`}
               onLoad={() => setLoading(false)}
-              className="m-auto h-full rounded-lg object-cover ring-1 ring-inset ring-border_col"
+              className="m-auto h-full w-full object-cover"
             />
             {hasHover && (
-              <p className="absolute top-0 flex h-full w-full items-center justify-center bg-base_col_darker/80 text-secondary">
+              <p className="absolute top-0 flex h-full w-full items-center justify-center bg-ink font-mono text-xs font-bold uppercase tracking-[2px] text-paper">
                 {props.web && "Live Demo"}
                 {!props.web && "Source Code"}
               </p>
             )}
             {loading && (
-              <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center rounded-lg bg-base_col_darker/80">
+              <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center bg-paper">
                 <LoadingSpinner />
               </div>
             )}
           </div>
         ) : null}
       </div>
-      <p className="max-h-[130px] min-h-[130px] overflow-auto text-sm text-primary">
+      <p className="max-h-[130px] min-h-[130px] overflow-auto text-sm leading-[1.6] text-ink">
         {props.desc}
       </p>
-      <div className="mt-5 font-mono text-xs text-primary">{props.stack}</div>
+      <div className="mt-5 flex flex-wrap gap-2 border-t-[3px] border-ink pt-4">
+        {stacks.map((tech) => (
+          <span key={tech} className="chip">
+            {tech}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

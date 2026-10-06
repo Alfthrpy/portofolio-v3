@@ -84,13 +84,13 @@ export const ContentCertification = () => {
   ];
 
   return (
-    <div className="cursor-default text-primary">
+    <div className="cursor-default text-ink">
       {vendorList.map((vendor, index) => {
         return (
           <div key={index}>
-            <h3 className="pb-3 text-lg font-medium leading-loose text-secondary md:text-xl">
+            <h3 className="pb-3 text-lg font-display leading-loose text-ink md:text-xl">
               {vendor.type}
-              <span className="text-base text-accent">
+              <span className="text-base text-ink">
                 {" "}
                 @
                 <a
@@ -111,7 +111,7 @@ export const ContentCertification = () => {
                       href={item.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="static  items-center justify-start transition-all duration-300 hover:text-accent md:inline-flex"
+                      className="static items-center justify-start transition-colors duration-150 hover:bg-ink hover:text-paper md:inline-flex"
                     >
                       {item.name}
                     </a>

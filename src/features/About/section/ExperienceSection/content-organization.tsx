@@ -29,12 +29,12 @@ export const ContentOrganization = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-8 text-primary">
+    <div className="flex flex-col gap-8 text-ink">
       {datas.map((data, index) => (
         <div key={index}>
-          <h3 className="text-lg font-medium leading-loose text-secondary md:text-xl">
+          <h3 className="text-lg font-display leading-loose text-ink md:text-xl">
             {data.title}
-            <span className="text-base text-accent">
+            <span className="text-base text-ink">
               {" "}
               @
               <a
