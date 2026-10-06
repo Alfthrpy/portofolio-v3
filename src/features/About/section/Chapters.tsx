@@ -30,45 +30,32 @@ const linkCls = (dark: boolean) =>
     ? "text-paper underline decoration-2 underline-offset-2 hover:bg-paper hover:text-ink"
     : "text-underline";
 
-const EntryRow: FC<{ entry: Entry; dark: boolean; mirror: boolean }> = ({
-  entry,
-  dark,
-  mirror,
-}) => (
+const EntryRow: FC<{ entry: Entry; dark: boolean }> = ({ entry, dark }) => (
   <article
     className={`border-t-[3px] py-8 last:border-b-[3px] ${
       dark ? "border-paper" : "border-ink"
     }`}
   >
-    <div
-      className={`flex flex-col gap-2 md:flex-row md:items-baseline md:gap-6 ${
-        mirror ? "md:flex-row-reverse md:text-right" : "md:justify-between"
-      }`}
-    >
-      <h3 className="font-display text-xl leading-snug md:text-2xl">
-        {entry.title}
-        {entry.org && (
-          <span className="font-mono text-base font-bold">
-            {" "}
-            @{" "}
-            {entry.orgUrl ? (
-              <a
-                href={entry.orgUrl}
-                target="_blank"
-                rel="noreferrer"
-                className={linkCls(dark)}
-              >
-                {entry.org}
-              </a>
-            ) : (
-              entry.org
-            )}
-          </span>
+    <h3 className="font-display text-xl leading-snug md:text-2xl">
+      {entry.title}
+    </h3>
+    <div className="mt-2 flex flex-col gap-1 font-mono text-xs font-bold uppercase tracking-[2px] sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+      <p>
+        @{" "}
+        {entry.orgUrl ? (
+          <a
+            href={entry.orgUrl}
+            target="_blank"
+            rel="noreferrer"
+            className={linkCls(dark)}
+          >
+            {entry.org}
+          </a>
+        ) : (
+          entry.org
         )}
-      </h3>
-      <p className="shrink-0 font-mono text-xs font-bold uppercase tracking-[2px]">
-        {entry.date}
       </p>
+      <p className="shrink-0">{entry.date}</p>
     </div>
     <div className="mt-4 max-w-[68ch] text-base leading-[1.7]">
       {entry.description}
@@ -113,7 +100,7 @@ const Chapter: FC<{ chapter: Chapter }> = ({ chapter }) => {
         </div>
         <div className="mt-12">
           {chapter.entries.map((entry, i) => (
-            <EntryRow key={i} entry={entry} dark={dark} mirror={right} />
+            <EntryRow key={i} entry={entry} dark={dark} />
           ))}
         </div>
       </div>
