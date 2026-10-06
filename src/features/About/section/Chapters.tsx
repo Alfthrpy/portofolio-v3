@@ -170,7 +170,7 @@ const chapters: Chapter[] = [
         title: "Informatics Engineering",
         org: "Sunan Gunung Jati State Islamic University, Bandung",
         orgUrl: "https://if.uinsgd.ac.id/",
-        date: "Aug 2020 — Jul 2026",
+        date: "Aug 2020 — Jul 2026 · GPA 3.90/4.00",
         description: (
           <ul className="flex list-inside list-disc flex-col gap-3">
             <li>
@@ -237,7 +237,7 @@ const chapters: Chapter[] = [
   {
     id: "awards",
     title: "AWARDS",
-    meta: "2022 — 2024 / 3 wins",
+    meta: "2022 — 2025 / 4 wins",
     align: "right",
     tone: "paper",
     entries: [
@@ -260,14 +260,17 @@ const chapters: Chapter[] = [
       },
       {
         title: "Gold Medal IICYMS — Computer Science",
-        org: "IYSA",
+        org: "IYSA × UNIKOM",
         orgUrl: "https://www.iysa.or.id/",
         date: "Aug 2024",
         description: (
           <>
-            Won the IICYMS competition Gold Medal in the Computer Science
-            category, where my team developed a semantic search engine
-            application for the Quran. Link Application:{" "}
+            With Team Sequran, built a semantic search engine for the
+            Qur&apos;an using Sentence-BERT — Gold Medal in the Computer
+            Science category at IICYMS 2024. Co-authored the research paper,
+            ran large-scale web scraping for dataset collection, and tested
+            the semantic search pipeline for context-aware verse retrieval.
+            Link Application:{" "}
             <a
               className="text-underline"
               href="https://beta-sequran.vercel.app/"
@@ -276,6 +279,14 @@ const chapters: Chapter[] = [
             </a>
           </>
         ),
+      },
+      {
+        title: "Gold Medal IICYMS — Social Science",
+        org: "IYSA × UNIKOM",
+        orgUrl: "https://www.iysa.or.id/",
+        date: "2025",
+        description:
+          "As a core member of Team Tenangin, led the design, development, deployment, and evaluation of an AI-powered mental-health chatbot — Gold Medal in the Social Science category at IICYMS 2025, competing against 140+ teams from 7 countries. Architected the chatbot framework and ran evaluations on user engagement, emotional support, and usability.",
       },
     ],
   },

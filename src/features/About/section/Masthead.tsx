@@ -11,7 +11,7 @@ const Masthead = () => {
 
   return (
     <header className="pt-32 md:pt-40">
-      <div className="grid gap-10 md:grid-cols-12 md:items-end">
+      <div className="grid gap-10 md:grid-cols-12 md:items-center">
         <div className="md:col-span-8">
           <motion.h1
             initial={reduce ? false : { clipPath: "inset(0 100% 0 0)" }}
